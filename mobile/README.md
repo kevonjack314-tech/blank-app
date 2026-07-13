@@ -22,6 +22,12 @@ Progress is saved on the device. To sync with the web app's Supabase database
 (so phone and web share one set of goals), open `src/config.js` and paste in
 the same `SUPABASE_URL` and anon key you used for the web app.
 
+There's a **daily reminder** card on the home screen — flip it on and pick a
+time, and the app schedules a local notification every day ("🌱 Your tiny step
+is ready"). It runs entirely on the device, so it works offline and needs no
+server. The first time you enable it, your phone will ask for notification
+permission.
+
 ## Publishing to the App Store / Google Play
 
 Expo's build service (EAS) compiles the store-ready binaries in the cloud —
@@ -55,9 +61,10 @@ no Mac or Android Studio required:
 
    Then complete the listing in App Store Connect and submit for review.
 
-Before submitting, add real icon/splash images to `assets/` and reference
-them in `app.json` (`icon`, `splash.image`, `android.adaptiveIcon.foregroundImage`) —
-stores require them. Expo's docs cover the details:
+The app icon, Android adaptive icon, splash screen, and notification icon
+that stores require are already in `assets/` and wired up in `app.json`.
+They're generated — to tweak colors or the mark, edit and re-run
+`python3 scripts/generate_art.py`. Expo's publishing docs cover the rest:
 <https://docs.expo.dev/tutorial/eas/introduction/>.
 
 ## Development notes

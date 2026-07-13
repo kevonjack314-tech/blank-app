@@ -6,7 +6,10 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "backgroundColor": "#f4f7f4",
+    "icon": "./assets/icon.png",
     "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
       "backgroundColor": "#f4f7f4"
     },
     "ios": {
@@ -16,8 +19,18 @@
     "android": {
       "package": "com.tinysteps.app",
       "adaptiveIcon": {
-        "backgroundColor": "#f4f7f4"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2e7d4f"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#2e7d4f"
+        }
+      ]
+    ]
   }
 }

@@ -6,6 +6,7 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
+  Switch,
   Text,
   TextInput,
   TouchableOpacity,
@@ -26,6 +27,7 @@ import {
   addDaysISO,
 } from './src/logic';
 import { loadData, saveData } from './src/storage';
+import { applyReminder, formatTime, loadReminderPref } from './src/notifications';
 
 const C = {
   bg: '#f4f7f4',
@@ -137,7 +139,61 @@ function HomeScreen({ data, setScreen, cloudNote }) {
       <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen({ name: 'add' })}>
         <Text style={styles.secondaryTxt}>➕ Work on something else too</Text>
       </TouchableOpacity>
+      <ReminderCard />
     </ScrollView>
+  );
+}
+
+function ReminderCard() {
+  const [pref, setPref] = useState(null);
+
+  useEffect(() => {
+    loadReminderPref().then(setPref);
+  }, []);
+
+  if (!pref) return null;
+
+  const apply = async (next) => {
+    setPref(next); // optimistic, then reconcile with what actually took effect
+    const effective = await applyReminder(next);
+    setPref(effective);
+    if (next.enabled && !effective.enabled) {
+      Alert.alert(
+        'Notifications are off',
+        'Tiny Steps needs notification permission for reminders. You can enable it in your phone Settings.'
+      );
+    }
+  };
+
+  const shiftTime = (deltaMinutes) => {
+    const totalMin = (pref.hour * 60 + pref.minute + deltaMinutes + 1440) % 1440;
+    apply({ ...pref, hour: Math.floor(totalMin / 60), minute: totalMin % 60 });
+  };
+
+  return (
+    <View style={styles.card}>
+      <View style={styles.rowBetween}>
+        <Text style={styles.cardTitle}>⏰ Daily reminder</Text>
+        <Switch
+          value={pref.enabled}
+          onValueChange={(on) => apply({ ...pref, enabled: on })}
+          trackColor={{ true: C.accent }}
+        />
+      </View>
+      {pref.enabled ? (
+        <View style={[styles.rowBetween, { marginTop: 12 }]}>
+          <TouchableOpacity style={styles.timeBtn} onPress={() => shiftTime(-30)}>
+            <Text style={styles.timeBtnTxt}>−30 min</Text>
+          </TouchableOpacity>
+          <Text style={styles.timeTxt}>{formatTime(pref.hour, pref.minute)}</Text>
+          <TouchableOpacity style={styles.timeBtn} onPress={() => shiftTime(30)}>
+            <Text style={styles.timeBtnTxt}>+30 min</Text>
+          </TouchableOpacity>
+        </View>
+      ) : (
+        <Text style={styles.cardHint}>Get a gentle nudge each day when your tiny step is ready.</Text>
+      )}
+    </View>
   );
 }
 
@@ -473,6 +529,14 @@ const styles = StyleSheet.create({
   ladderRow: { fontSize: 14, color: C.sub, paddingVertical: 5 },
   ladderNow: { color: C.ink, fontWeight: '700' },
   ladderDone: { color: C.accent },
+  timeBtn: {
+    backgroundColor: C.accentSoft,
+    borderRadius: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+  },
+  timeBtnTxt: { color: C.accent, fontWeight: '700', fontSize: 14 },
+  timeTxt: { fontSize: 20, fontWeight: '800', color: C.ink },
   input: {
     backgroundColor: C.card,
     borderWidth: 1.5,
