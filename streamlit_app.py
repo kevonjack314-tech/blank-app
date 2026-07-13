@@ -1,13 +1,9 @@
-import json
-import math
 from datetime import date, datetime, timedelta
-from pathlib import Path
 
 import streamlit as st
 
 from goals_library import GOAL_LIBRARY, get_goal_options
-
-DATA_FILE = Path(__file__).parent / "user_data.json"
+from storage import load_data, save_data
 
 TIMELINE_PRESETS = {
     "2 weeks (sprint)": 14,
@@ -20,21 +16,6 @@ TIMELINE_PRESETS = {
 }
 
 st.set_page_config(page_title="Tiny Steps", page_icon="🌱", layout="centered")
-
-
-# ---------------------------------------------------------------- storage ---
-
-def load_data():
-    if DATA_FILE.exists():
-        try:
-            return json.loads(DATA_FILE.read_text())
-        except (json.JSONDecodeError, OSError):
-            return {"goals": []}
-    return {"goals": []}
-
-
-def save_data(data):
-    DATA_FILE.write_text(json.dumps(data, indent=2))
 
 
 if "data" not in st.session_state:
