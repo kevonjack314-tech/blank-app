@@ -1,5 +1,15 @@
 # 🌱 Tiny Steps — self-improvement, one baby step a day
 
+This repo contains two versions of the app:
+
+- **Web app** (this folder) — Streamlit, deployable to Streamlit Cloud
+- **Mobile app** ([`mobile/`](mobile/)) — Expo / React Native, for iPhone &
+  Android, publishable to the App Store and Google Play (see
+  [`mobile/README.md`](mobile/README.md))
+
+Both share the same goal content, the same pacing logic, and (optionally) the
+same Supabase database, so your progress follows you.
+
 Pick anything you want to get better at — social anxiety, communication, self-doubt,
 addiction recovery, relationship health, reading, fitness, quitting porn, songwriting,
 singing, or a custom goal — and the app gives you **one small task every day**.

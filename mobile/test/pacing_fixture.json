@@ -1,0 +1,434 @@
+[
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "expectedLevel": 7
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "expectedLevel": 6
+  }
+]
