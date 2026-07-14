@@ -20,6 +20,7 @@ import {
   currentLevelIndex,
   goalDays,
   goalOptions,
+  levelsFor,
   makeGoal,
   paceLabel,
   taskForDay,
@@ -51,6 +52,11 @@ export default function App() {
     loadData().then(({ data: d, cloudError }) => {
       setData(d);
       if (cloudError) setCloudNote('Cloud sync unreachable — using data saved on this device.');
+      // Roll the 7-day reminder window forward so notifications keep coming
+      // (and keep showing the right task) even if the app isn't opened daily.
+      loadReminderPref().then((pref) => {
+        if (pref.enabled) applyReminder(pref, d.goals);
+      });
     });
   }, []);
 
@@ -119,7 +125,7 @@ function HomeScreen({ data, setScreen, cloudNote }) {
         const lib = GOAL_LIBRARY[g.category];
         const done = (g.completed_dates || []).includes(today);
         const { total, dayIndex } = goalDays(g);
-        const streak = computeStreak(g);
+        const { streak } = computeStreak(g);
         return (
           <TouchableOpacity key={g.id} style={styles.card} onPress={() => setScreen({ name: 'goal', goalId: g.id })}>
             <View style={styles.rowBetween}>
@@ -139,12 +145,12 @@ function HomeScreen({ data, setScreen, cloudNote }) {
       <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen({ name: 'add' })}>
         <Text style={styles.secondaryTxt}>➕ Work on something else too</Text>
       </TouchableOpacity>
-      <ReminderCard />
+      <ReminderCard goals={data.goals} />
     </ScrollView>
   );
 }
 
-function ReminderCard() {
+function ReminderCard({ goals }) {
   const [pref, setPref] = useState(null);
 
   useEffect(() => {
@@ -155,7 +161,7 @@ function ReminderCard() {
 
   const apply = async (next) => {
     setPref(next); // optimistic, then reconcile with what actually took effect
-    const effective = await applyReminder(next);
+    const effective = await applyReminder(next, goals);
     setPref(effective);
     if (next.enabled && !effective.enabled) {
       Alert.alert(
@@ -210,8 +216,8 @@ function GoalScreen({ data, persist, goHome, goalId }) {
   const { total, dayIndex } = goalDays(goal);
   const doneToday = (goal.completed_dates || []).includes(today);
   const finished = dayIndex >= total;
-  const streak = computeStreak(goal);
-  const levels = lib.levels;
+  const { streak, shields } = computeStreak(goal);
+  const levels = levelsFor(goal);
   const lvlNow = currentLevelIndex(goal);
   const { levelIndex, levelTitle, task } = taskForDay(goal, easier ? -1 : 0);
   const pace = paceLabel(total, levels.length);
@@ -233,10 +239,14 @@ function GoalScreen({ data, persist, goHome, goalId }) {
       <View style={styles.metricsRow}>
         <Metric label="Day" value={`${Math.min(dayIndex + 1, total)} / ${total}`} />
         <Metric label="Streak" value={`🔥 ${streak}`} />
+        <Metric label="Shields" value={`🛡️ ${shields}`} />
         <Metric label="Done" value={`${(goal.completed_dates || []).length}`} />
       </View>
       <ProgressBar pct={pct} />
       <Text style={styles.cardMeta}>{Math.round(pct * 100)}% through your timeline</Text>
+      <Text style={styles.cardHint}>
+        🛡️ Every 7 completed tasks earns a shield that auto-covers one missed day.
+      </Text>
 
       {lib.support_note ? <Note text={`💛 ${lib.support_note}`} /> : null}
 

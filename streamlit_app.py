@@ -2,6 +2,7 @@ from datetime import date, datetime, timedelta
 
 import streamlit as st
 
+from ai_ladders import ai_available, generate_ladder
 from goals_library import GOAL_LIBRARY, get_goal_options
 from storage import load_data, save_data
 
@@ -32,9 +33,14 @@ def goal_days(goal):
     return total, day_index
 
 
+def levels_for(goal):
+    """A goal's ladder: its own AI-generated one if present, else the library's."""
+    return goal.get("custom_levels") or GOAL_LIBRARY[goal["category"]]["levels"]
+
+
 def current_level_index(goal):
     """Map today onto the ladder. Short timelines climb fast, long ones slow."""
-    levels = GOAL_LIBRARY[goal["category"]]["levels"]
+    levels = levels_for(goal)
     total, day_index = goal_days(goal)
     day_index = min(max(day_index, 0), total - 1)
     return min(len(levels) - 1, day_index * len(levels) // total)
@@ -42,7 +48,7 @@ def current_level_index(goal):
 
 def task_for_day(goal, level_offset=0):
     """Deterministic daily task: same task all day, rotates variants day to day."""
-    levels = GOAL_LIBRARY[goal["category"]]["levels"]
+    levels = levels_for(goal)
     lvl = max(0, current_level_index(goal) + level_offset)
     lvl = min(lvl, len(levels) - 1)
     level = levels[lvl]
@@ -61,18 +67,28 @@ def pace_label(total_days, num_levels):
 
 
 def compute_streak(goal):
+    """Return (streak, shields_available).
+
+    Streak counts back from today (or yesterday if today isn't done yet).
+    Shields protect streaks: every 7 completed tasks earns one, and each can
+    auto-cover a single missed day. Two missed days in a row always break.
+    """
     done = set(goal.get("completed_dates", []))
-    if not done:
-        return 0
-    # Streak counts back from today, or from yesterday if today isn't done yet.
+    shields_earned = len(done) // 7
+    used = 0
     day = date.today()
     if day.isoformat() not in done:
         day -= timedelta(days=1)
     streak = 0
-    while day.isoformat() in done:
-        streak += 1
+    while True:
+        if day.isoformat() in done:
+            streak += 1
+        elif used < shields_earned and (day - timedelta(days=1)).isoformat() in done:
+            used += 1
+        else:
+            break
         day -= timedelta(days=1)
-    return streak
+    return streak, max(shields_earned - used, 0)
 
 
 # ---------------------------------------------------------------- add goal ---
@@ -93,6 +109,8 @@ def render_add_goal(first_goal=False):
         custom_name = st.text_input(
             "Name your goal", placeholder="e.g. Learn guitar, wake up earlier, save money..."
         )
+        if ai_available():
+            st.caption("✨ AI will build a personalized 8-level plan just for this goal.")
     else:
         st.caption(GOAL_LIBRARY[category]["description"])
 
@@ -128,6 +146,13 @@ def render_add_goal(first_goal=False):
             "end_date": (date.today() + timedelta(days=days)).isoformat(),
             "completed_dates": [],
         }
+        if category == "custom" and ai_available():
+            with st.spinner("✨ Building your personalized plan..."):
+                custom_levels = generate_ladder(goal["name"], days)
+            if custom_levels:
+                goal["custom_levels"] = custom_levels
+            else:
+                st.info("AI plan wasn't available right now — using the proven generic ladder instead.")
         st.session_state.data["goals"].append(goal)
         save_data(st.session_state.data)
         st.session_state.pop("adding_goal", None)
@@ -142,15 +167,17 @@ def render_goal(goal):
     today_iso = date.today().isoformat()
     done_today = today_iso in goal.get("completed_dates", [])
     finished = day_index >= total
-    streak = compute_streak(goal)
+    streak, shields = compute_streak(goal)
     days_done = len(goal.get("completed_dates", []))
 
     st.subheader(f"{lib['emoji']} {goal['name']}")
 
-    c1, c2, c3 = st.columns(3)
+    c1, c2, c3, c4 = st.columns(4)
     c1.metric("Day", f"{min(day_index + 1, total)} / {total}")
     c2.metric("Streak", f"🔥 {streak}")
-    c3.metric("Tasks done", days_done)
+    c3.metric("Shields", f"🛡️ {shields}")
+    c4.metric("Tasks done", days_done)
+    st.caption("🛡️ Every 7 completed tasks earns a shield that auto-covers one missed day.")
 
     pct = min(max(day_index, 0) / total, 1.0)
     st.progress(pct, text=f"{int(pct * 100)}% through your timeline")
@@ -179,7 +206,7 @@ def render_goal(goal):
     # --- today's task ---
     easier = st.session_state.get(f"easier_{goal['id']}", False)
     lvl_idx, lvl_title, task = task_for_day(goal, level_offset=-1 if easier else 0)
-    num_levels = len(lib["levels"])
+    num_levels = len(levels_for(goal))
     pace, _ = pace_label(total, num_levels)
 
     st.markdown(f"**Level {lvl_idx + 1} of {num_levels}: {lvl_title}** · {pace}")
@@ -205,7 +232,7 @@ def render_goal(goal):
 
     # --- ladder overview ---
     with st.expander("🪜 See your full ladder"):
-        for i, level in enumerate(lib["levels"]):
+        for i, level in enumerate(levels_for(goal)):
             if i < lvl_idx:
                 st.markdown(f"~~**Level {i + 1}: {level['title']}**~~ ✅")
             elif i == lvl_idx:

@@ -23,10 +23,18 @@ Progress is saved on the device. To sync with the web app's Supabase database
 the same `SUPABASE_URL` and anon key you used for the web app.
 
 There's a **daily reminder** card on the home screen — flip it on and pick a
-time, and the app schedules a local notification every day ("🌱 Your tiny step
-is ready"). It runs entirely on the device, so it works offline and needs no
-server. The first time you enable it, your phone will ask for notification
-permission.
+time, and the app schedules a local notification every day showing **that
+day's actual task** ("🌱 Your tiny step is ready — Give one genuine compliment
+today"), so you can act on it without even opening the app. Tasks are
+deterministic per date, so the app schedules the next 7 days up front and
+rolls the window forward each time it opens. It runs entirely on the device —
+offline, no server. The first time you enable it, your phone asks for
+notification permission.
+
+Streak **shields** work here too: every 7 completed tasks earns one, and each
+auto-covers a single missed day. And custom goals created on the web app with
+an AI-generated plan carry their personalized ladder over through Supabase
+sync.
 
 ## Publishing to the App Store / Google Play
 

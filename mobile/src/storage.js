@@ -4,7 +4,10 @@ import { SUPABASE_URL, SUPABASE_ANON_KEY } from './config';
 const LOCAL_KEY = 'tiny-steps-data';
 const TABLE = 'tiny_steps';
 const ROW_ID = 'default';
-const EMPTY = { goals: [] };
+
+// Fresh object every call — a shared constant's inner array could be mutated
+// and leak stale goals into later "empty" loads.
+const empty = () => ({ goals: [] });
 
 const cloudEnabled = () => Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
@@ -17,9 +20,9 @@ const headers = () => ({
 async function loadLocal() {
   try {
     const raw = await AsyncStorage.getItem(LOCAL_KEY);
-    return raw ? JSON.parse(raw) : { ...EMPTY };
+    return raw ? JSON.parse(raw) : empty();
   } catch {
-    return { ...EMPTY };
+    return empty();
   }
 }
 
@@ -40,7 +43,7 @@ export async function loadData() {
       const res = await fetch(url, { headers: headers() });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const rows = await res.json();
-      const data = rows.length ? rows[0].data : { ...EMPTY };
+      const data = rows.length ? rows[0].data : empty();
       await saveLocal(data);
       return { data, cloudError: null };
     } catch (e) {

@@ -7,12 +7,16 @@ import {
   addDaysISO,
   computeStreak,
   currentLevelIndex,
+  levelsFor,
   makeGoal,
   paceLabel,
   taskForDay,
 } from '../src/logic.js';
 
 const fixture = JSON.parse(readFileSync(new URL('./pacing_fixture.json', import.meta.url), 'utf8'));
+const shieldsFixture = JSON.parse(
+  readFileSync(new URL('./shields_fixture.json', import.meta.url), 'utf8')
+);
 
 const START = '2026-01-01';
 const goalFor = (category, total) => ({
@@ -64,10 +68,41 @@ test('easier step drops one level but never below zero', () => {
 test('streaks count consecutive days, forgiving an unfinished today', () => {
   const today = '2026-03-10';
   const g = (dates) => ({ category: 'reading', completed_dates: dates });
-  assert.equal(computeStreak(g([]), today), 0);
-  assert.equal(computeStreak(g(['2026-03-09', '2026-03-10']), today), 2);
-  assert.equal(computeStreak(g(['2026-03-08', '2026-03-09']), today), 2); // today not done yet
-  assert.equal(computeStreak(g(['2026-03-06', '2026-03-09']), today), 1); // gap resets
+  assert.equal(computeStreak(g([]), today).streak, 0);
+  assert.equal(computeStreak(g(['2026-03-09', '2026-03-10']), today).streak, 2);
+  assert.equal(computeStreak(g(['2026-03-08', '2026-03-09']), today).streak, 2); // today not done yet
+  assert.equal(computeStreak(g(['2026-03-06', '2026-03-09']), today).streak, 1); // gap resets
+});
+
+test('streak shields match the Python web app exactly', () => {
+  for (const c of shieldsFixture) {
+    const { streak, shields } = computeStreak(
+      { category: 'reading', completed_dates: c.completedDates },
+      c.today
+    );
+    assert.equal(streak, c.expectedStreak, `${c.name}: streak`);
+    assert.equal(shields, c.expectedShields, `${c.name}: shields`);
+  }
+});
+
+test('AI custom ladders override the library ladder', () => {
+  const customLevels = [
+    { title: 'Warmup', tasks: ['Juggle 1 ball for 2 minutes', 'Toss and catch 10 times'] },
+    { title: 'Two balls', tasks: ['Exchange two balls 10 times', 'Two-ball cascade for 1 minute'] },
+  ];
+  const goal = {
+    category: 'custom',
+    custom_levels: customLevels,
+    start_date: '2026-01-01',
+    end_date: addDaysISO('2026-01-01', 60),
+    completed_dates: [],
+  };
+  assert.equal(levelsFor(goal), customLevels);
+  const late = taskForDay(goal, 0, addDaysISO('2026-01-01', 45));
+  assert.equal(late.levelTitle, 'Two balls');
+  assert.ok(customLevels[1].tasks.includes(late.task));
+  delete goal.custom_levels;
+  assert.equal(levelsFor(goal), GOAL_LIBRARY.custom.levels);
 });
 
 test('pace labels match web thresholds', () => {

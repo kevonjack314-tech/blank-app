@@ -36,6 +36,12 @@ function daysBetween(fromISO, toISO) {
   return Math.round((to - from) / 86400000);
 }
 
+// A goal's ladder: its own AI-generated one (built by the web app and synced
+// via Supabase) if present, else the library's.
+export function levelsFor(goal) {
+  return goal.custom_levels || GOAL_LIBRARY[goal.category].levels;
+}
+
 export function goalDays(goal, today = todayISO()) {
   const total = Math.max(daysBetween(goal.start_date, goal.end_date), 1);
   const dayIndex = daysBetween(goal.start_date, today); // 0-based, can exceed total
@@ -43,7 +49,7 @@ export function goalDays(goal, today = todayISO()) {
 }
 
 export function currentLevelIndex(goal, today = todayISO()) {
-  const levels = GOAL_LIBRARY[goal.category].levels;
+  const levels = levelsFor(goal);
   const { total, dayIndex } = goalDays(goal, today);
   const clamped = Math.min(Math.max(dayIndex, 0), total - 1);
   return Math.min(levels.length - 1, Math.floor((clamped * levels.length) / total));
@@ -51,7 +57,7 @@ export function currentLevelIndex(goal, today = todayISO()) {
 
 // Deterministic daily task: same task all day, variants rotate day to day.
 export function taskForDay(goal, levelOffset = 0, today = todayISO()) {
-  const levels = GOAL_LIBRARY[goal.category].levels;
+  const levels = levelsFor(goal);
   let lvl = Math.max(0, currentLevelIndex(goal, today) + levelOffset);
   lvl = Math.min(lvl, levels.length - 1);
   const level = levels[lvl];
@@ -80,17 +86,27 @@ export function paceLabel(totalDays, numLevels) {
   };
 }
 
-// Streak counts back from today, or from yesterday if today isn't done yet.
+// Returns { streak, shields }. Streak counts back from today (or yesterday if
+// today isn't done yet). Shields protect streaks: every 7 completed tasks
+// earns one, and each can auto-cover a single missed day. Two missed days in
+// a row always break. Mirrors compute_streak in streamlit_app.py exactly.
 export function computeStreak(goal, today = todayISO()) {
   const done = new Set(goal.completed_dates || []);
-  if (done.size === 0) return 0;
+  const shieldsEarned = Math.floor(done.size / 7);
+  let used = 0;
   let day = done.has(today) ? today : addDaysISO(today, -1);
   let streak = 0;
-  while (done.has(day)) {
-    streak += 1;
+  for (;;) {
+    if (done.has(day)) {
+      streak += 1;
+    } else if (used < shieldsEarned && done.has(addDaysISO(day, -1))) {
+      used += 1;
+    } else {
+      break;
+    }
     day = addDaysISO(day, -1);
   }
-  return streak;
+  return { streak, shields: Math.max(shieldsEarned - used, 0) };
 }
 
 export function goalOptions() {

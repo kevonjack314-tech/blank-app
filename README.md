@@ -22,8 +22,11 @@ practice at each stage.
 Features:
 
 - 🪜 Every goal is a ladder of levels, from "embarrassingly easy" to "the real deal"
+- ✨ Custom goals get a personalized AI-built ladder (with an Anthropic API key — see below)
 - ⏱️ Timeline picker (2 weeks → 1 year, or a custom date) that paces the ladder
 - 🔥 Streaks, progress bar, and daily check-off with multiple goals at once
+- 🛡️ Streak shields: every 7 completed tasks earns one, and each auto-covers a
+  single missed day so one bad day doesn't erase a 40-day streak
 - 💚 "Too big today" button that swaps in a gentler step from the previous level
 - 🎉 End-of-journey celebration with the option to extend 30 days
 
@@ -63,6 +66,22 @@ That's it — the app detects the credentials and syncs every change to
 Supabase, falling back to the local file if the connection ever hiccups.
 The keys stay server-side in Streamlit secrets; visitors to the app never
 see them.
+
+### AI-built plans for custom goals
+
+Out of the box, custom goals use a proven generic habit-building ladder. To
+have AI build a personalized 8-level ladder for *any* goal you type (juggling,
+budgeting, public speaking...), add an [Anthropic API key](https://platform.claude.com)
+to your Streamlit secrets:
+
+```toml
+ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+Each generated plan is one API call (typically a fraction of a cent) and is
+stored with the goal, so it's never regenerated — and the mobile app picks it
+up automatically through Supabase sync. Without a key, everything still works
+with the generic ladder.
 
 ### How to run it on your own machine
 

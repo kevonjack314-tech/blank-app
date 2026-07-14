@@ -1,0 +1,146 @@
+[
+  {
+    "name": "empty",
+    "today": "2026-03-10",
+    "completedDates": [],
+    "expectedStreak": 0,
+    "expectedShields": 0
+  },
+  {
+    "name": "three straight",
+    "today": "2026-03-10",
+    "completedDates": [
+      "2026-03-10",
+      "2026-03-09",
+      "2026-03-08"
+    ],
+    "expectedStreak": 3,
+    "expectedShields": 0
+  },
+  {
+    "name": "seven straight (earns shield)",
+    "today": "2026-03-10",
+    "completedDates": [
+      "2026-03-10",
+      "2026-03-09",
+      "2026-03-08",
+      "2026-03-07",
+      "2026-03-06",
+      "2026-03-05",
+      "2026-03-04"
+    ],
+    "expectedStreak": 7,
+    "expectedShields": 1
+  },
+  {
+    "name": "gap without shield breaks",
+    "today": "2026-03-10",
+    "completedDates": [
+      "2026-03-10",
+      "2026-03-09",
+      "2026-03-08",
+      "2026-03-06",
+      "2026-03-05"
+    ],
+    "expectedStreak": 3,
+    "expectedShields": 0
+  },
+  {
+    "name": "shield covers one gap",
+    "today": "2026-03-10",
+    "completedDates": [
+      "2026-03-10",
+      "2026-03-09",
+      "2026-03-08",
+      "2026-03-07",
+      "2026-03-06",
+      "2026-03-05",
+      "2026-03-04",
+      "2026-03-02",
+      "2026-03-01",
+      "2026-02-28",
+      "2026-02-27",
+      "2026-02-26",
+      "2026-02-25",
+      "2026-02-24"
+    ],
+    "expectedStreak": 14,
+    "expectedShields": 1
+  },
+  {
+    "name": "two-day gap always breaks",
+    "today": "2026-03-10",
+    "completedDates": [
+      "2026-03-10",
+      "2026-03-09",
+      "2026-03-08",
+      "2026-03-07",
+      "2026-03-06",
+      "2026-03-05",
+      "2026-03-04",
+      "2026-03-01",
+      "2026-02-28",
+      "2026-02-27",
+      "2026-02-26",
+      "2026-02-25",
+      "2026-02-24",
+      "2026-02-23"
+    ],
+    "expectedStreak": 7,
+    "expectedShields": 2
+  },
+  {
+    "name": "today pending, yesterday missed, shield covers",
+    "today": "2026-03-10",
+    "completedDates": [
+      "2026-03-08",
+      "2026-03-07",
+      "2026-03-06",
+      "2026-03-05",
+      "2026-03-04",
+      "2026-03-03",
+      "2026-03-02"
+    ],
+    "expectedStreak": 7,
+    "expectedShields": 0
+  },
+  {
+    "name": "two gaps, one shield",
+    "today": "2026-03-10",
+    "completedDates": [
+      "2026-03-10",
+      "2026-03-09",
+      "2026-03-08",
+      "2026-03-06",
+      "2026-03-05",
+      "2026-03-04",
+      "2026-03-03",
+      "2026-03-01",
+      "2026-02-28"
+    ],
+    "expectedStreak": 7,
+    "expectedShields": 0
+  },
+  {
+    "name": "two gaps, two shields",
+    "today": "2026-03-10",
+    "completedDates": [
+      "2026-03-10",
+      "2026-03-09",
+      "2026-03-08",
+      "2026-03-06",
+      "2026-03-05",
+      "2026-03-04",
+      "2026-03-03",
+      "2026-03-01",
+      "2026-02-28",
+      "2026-02-27",
+      "2026-02-26",
+      "2026-02-25",
+      "2026-02-24",
+      "2026-02-23"
+    ],
+    "expectedStreak": 14,
+    "expectedShields": 0
+  }
+]

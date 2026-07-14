@@ -24,7 +24,12 @@ import streamlit as st
 DATA_FILE = Path(__file__).parent / "user_data.json"
 TABLE = "tiny_steps"
 ROW_ID = "default"
-EMPTY = {"goals": []}
+
+
+def _empty():
+    # Fresh object every call — a shared constant's inner list would be
+    # mutated by goal appends and leak across sessions.
+    return {"goals": []}
 
 
 def _supabase_conf():
@@ -51,8 +56,8 @@ def _load_local():
         try:
             return json.loads(DATA_FILE.read_text())
         except (json.JSONDecodeError, OSError):
-            return dict(EMPTY)
-    return dict(EMPTY)
+            return _empty()
+    return _empty()
 
 
 def _save_local(data):
@@ -75,7 +80,7 @@ def load_data():
             )
             r.raise_for_status()
             rows = r.json()
-            data = rows[0]["data"] if rows else dict(EMPTY)
+            data = rows[0]["data"] if rows else _empty()
             _save_local(data)
             return data
         except (requests.RequestException, ValueError, KeyError, IndexError) as e:
