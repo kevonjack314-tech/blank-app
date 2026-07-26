@@ -1,0 +1,87 @@
+[
+  {
+    "done": 0,
+    "earnedCount": 0,
+    "upcoming": 1
+  },
+  {
+    "done": 1,
+    "earnedCount": 1,
+    "upcoming": 3
+  },
+  {
+    "done": 2,
+    "earnedCount": 1,
+    "upcoming": 3
+  },
+  {
+    "done": 3,
+    "earnedCount": 2,
+    "upcoming": 7
+  },
+  {
+    "done": 6,
+    "earnedCount": 2,
+    "upcoming": 7
+  },
+  {
+    "done": 7,
+    "earnedCount": 3,
+    "upcoming": 14
+  },
+  {
+    "done": 13,
+    "earnedCount": 3,
+    "upcoming": 14
+  },
+  {
+    "done": 14,
+    "earnedCount": 4,
+    "upcoming": 30
+  },
+  {
+    "done": 29,
+    "earnedCount": 4,
+    "upcoming": 30
+  },
+  {
+    "done": 30,
+    "earnedCount": 5,
+    "upcoming": 50
+  },
+  {
+    "done": 49,
+    "earnedCount": 5,
+    "upcoming": 50
+  },
+  {
+    "done": 50,
+    "earnedCount": 6,
+    "upcoming": 75
+  },
+  {
+    "done": 99,
+    "earnedCount": 7,
+    "upcoming": 100
+  },
+  {
+    "done": 100,
+    "earnedCount": 8,
+    "upcoming": 150
+  },
+  {
+    "done": 199,
+    "earnedCount": 9,
+    "upcoming": 200
+  },
+  {
+    "done": 200,
+    "earnedCount": 10,
+    "upcoming": null
+  },
+  {
+    "done": 500,
+    "earnedCount": 10,
+    "upcoming": null
+  }
+]

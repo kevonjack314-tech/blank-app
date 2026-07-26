@@ -12,7 +12,8 @@ same Supabase database, so your progress follows you.
 
 Pick anything you want to get better at — social anxiety, communication, self-doubt,
 addiction recovery, relationship health, reading, fitness, quitting porn, songwriting,
-singing, or a custom goal — and the app gives you **one small task every day**.
+singing, sleep, procrastination, anger, saving money, meditation, quitting vaping,
+or a custom goal — and the app gives you **one small task every day**.
 
 **The timeline changes the steps.** Tell it how long you want to give yourself:
 a 2-month goal climbs the difficulty ladder fast with bigger daily steps, while a
@@ -27,7 +28,12 @@ Features:
 - 🔥 Streaks, progress bar, and daily check-off with multiple goals at once
 - 🛡️ Streak shields: every 7 completed tasks earns one, and each auto-covers a
   single missed day so one bad day doesn't erase a 40-day streak
-- 💚 "Too big today" button that swaps in a gentler step from the previous level
+- 💪 Adaptive difficulty: answer "too easy / just right / too hard" after each task
+  and the whole ladder shifts with you, up to 3 levels either way
+- 🏅 Milestone badges at 1, 3, 7, 14, 30, 50, 75, 100, 150 and 200 tasks
+- 📅 A 12-week calendar heatmap of every day you showed up
+- 📖 An optional one-line journal per task, so you can reread week 1 and see the change
+- 💚 "Too big today" button that swaps in a gentler step for a single day
 - 🎉 End-of-journey celebration with the option to extend 30 days
 
 ### Saving your progress

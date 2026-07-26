@@ -648,6 +648,438 @@ export default {
       }
     ]
   },
+  "sleep": {
+    "name": "Sleep Better",
+    "emoji": "😴",
+    "description": "Fix your sleep one small habit at a time — no 5am miracle required.",
+    "support_note": null,
+    "levels": [
+      {
+        "title": "Notice the pattern",
+        "tasks": [
+          "Write down what time you actually fell asleep and woke up today. Just the numbers.",
+          "Note what you did in the hour before bed last night. No judgment — just facts.",
+          "Rate last night's sleep 1-10 and write one guess about what affected it."
+        ]
+      },
+      {
+        "title": "Anchor the morning",
+        "tasks": [
+          "Get out of bed within 15 minutes of your alarm today, even if you slept badly.",
+          "Get sunlight (or bright light) on your face within 30 minutes of waking, for 5 minutes.",
+          "Set your alarm for the same time tomorrow as today — consistency starts at the wake end."
+        ]
+      },
+      {
+        "title": "Wind-down starts",
+        "tasks": [
+          "Set a 'start winding down' alarm 30 minutes before your target bedtime tonight.",
+          "Dim the lights in your room for the last 30 minutes before bed tonight.",
+          "Do one calm thing for 10 minutes before bed: stretch, read a page, or just sit."
+        ]
+      },
+      {
+        "title": "Protect the room",
+        "tasks": [
+          "Charge your phone outside your bedroom tonight, or at least across the room.",
+          "Make your room as dark as you can tonight — cover or unplug one light source.",
+          "Set your room cooler than usual tonight; cool rooms make deeper sleep."
+        ]
+      },
+      {
+        "title": "Cut the interference",
+        "tasks": [
+          "No caffeine after 2pm today. Note tonight whether falling asleep felt different.",
+          "Stop screens 30 minutes before bed tonight — put the phone down, read or listen instead.",
+          "Skip alcohol tonight if it's part of your evening; it wrecks the second half of sleep."
+        ]
+      },
+      {
+        "title": "A real routine",
+        "tasks": [
+          "Do the same three wind-down steps in the same order tonight. Write them down first.",
+          "Hit your target bedtime within 20 minutes tonight.",
+          "If you can't sleep after 20 minutes tonight, get up and do something calm in dim light until sleepy, then return."
+        ]
+      },
+      {
+        "title": "Daytime supports night",
+        "tasks": [
+          "Get 20+ minutes of movement or a walk today, and note tonight's sleep quality.",
+          "Skip naps today — or cap one at 20 minutes before 3pm.",
+          "Eat your last real meal at least 2 hours before bed tonight."
+        ]
+      },
+      {
+        "title": "Sleeping well",
+        "tasks": [
+          "Keep your wake time within 30 minutes of your weekday time — even today.",
+          "Compare this week's sleep notes to week one and write down what changed.",
+          "Pick the one habit that helped most and commit to protecting it permanently."
+        ]
+      }
+    ]
+  },
+  "procrastination": {
+    "name": "Beat Procrastination",
+    "emoji": "⏳",
+    "description": "Start before you feel ready — tiny starts that break the avoidance loop.",
+    "support_note": null,
+    "levels": [
+      {
+        "title": "See the avoidance",
+        "tasks": [
+          "Write down the one task you're avoiding most right now. Naming it is today's task.",
+          "Write one sentence about what you feel when you think about that task (bored? scared? lost?).",
+          "Notice what you reach for when you avoid (phone, snacks, tidying) and write it down."
+        ]
+      },
+      {
+        "title": "Two-minute starts",
+        "tasks": [
+          "Work on the avoided task for exactly 2 minutes, then stop. Stopping is allowed.",
+          "Open the file, doc, or app for the avoided task. That's it — just open it.",
+          "Write the first sentence, first line of code, or first item. Ugly counts."
+        ]
+      },
+      {
+        "title": "Shrink the task",
+        "tasks": [
+          "Break the avoided task into 5 steps, each small enough to finish in 10 minutes.",
+          "Do only step one from your list today, then stop.",
+          "Rewrite your vague to-do ('work on project') as one concrete next action."
+        ]
+      },
+      {
+        "title": "Timeboxing",
+        "tasks": [
+          "Set a timer for 10 minutes and work with no tabs, no phone. Stop when it rings.",
+          "Do two 10-minute rounds today with a 5-minute break between them.",
+          "Schedule tomorrow's hardest task into a specific time slot on your calendar now."
+        ]
+      },
+      {
+        "title": "Remove the friction",
+        "tasks": [
+          "Prepare your workspace tonight so tomorrow's start takes zero setup.",
+          "Put your phone in another room for one 20-minute work block today.",
+          "Block or log out of your top distraction site for one work block today."
+        ]
+      },
+      {
+        "title": "Longer focus",
+        "tasks": [
+          "Do one 25-minute focused block on the most important task, then take a real break.",
+          "Start with the hardest task first today, before email or messages.",
+          "Do two 25-minute blocks today and note which part felt hardest to start."
+        ]
+      },
+      {
+        "title": "Finishing muscle",
+        "tasks": [
+          "Finish one thing today that's been 80% done. Ship it imperfect.",
+          "Work 25 minutes on something you'd normally leave until the deadline.",
+          "Do the small task you've postponed 3+ times (the call, the form, the email). Now."
+        ]
+      },
+      {
+        "title": "Reliable to yourself",
+        "tasks": [
+          "Pick your top 3 for today, do them first, and stop adding to the list.",
+          "Do a 45-minute deep block with no interruptions, phone in another room.",
+          "Review your week: what did you avoid, what did you start anyway? Write both down."
+        ]
+      }
+    ]
+  },
+  "anger": {
+    "name": "Manage Anger",
+    "emoji": "😤",
+    "description": "Build the pause between feeling it and acting on it.",
+    "support_note": "If anger has led to hurting someone or you fear it might, please talk to a therapist — anger management work with a professional is genuinely effective and not a weakness.",
+    "levels": [
+      {
+        "title": "Learn your signals",
+        "tasks": [
+          "Write down the last time you got angry and what happened right before it.",
+          "List your 3 physical early warnings (jaw, chest, hot face, louder voice).",
+          "Note one thing today that irritated you and rate it 1-10. Just observe."
+        ]
+      },
+      {
+        "title": "The pause",
+        "tasks": [
+          "Next time you feel irritation today, take 3 slow breaths before you speak.",
+          "Practice a 10-second pause once today before responding to anything annoying.",
+          "Say 'let me think for a second' out loud once today instead of reacting immediately."
+        ]
+      },
+      {
+        "title": "Cool the body",
+        "tasks": [
+          "When anger rises today, walk away for 5 minutes and come back. Announce it: 'I need 5 minutes.'",
+          "Do 60 seconds of slow breathing (4 in, 6 out) once today, angry or not — practice while calm.",
+          "Use cold water on your face or hands, or 20 quick pushups, at the first spike of anger today."
+        ]
+      },
+      {
+        "title": "Find the story",
+        "tasks": [
+          "After one irritation today, write the thought behind it ('they don't respect me').",
+          "Take one angry thought from today and write a second possible explanation for what happened.",
+          "Write down what you were actually feeling underneath the anger: hurt, scared, tired, ignored?"
+        ]
+      },
+      {
+        "title": "Say it clean",
+        "tasks": [
+          "Express one annoyance today as 'I feel X when Y' with no insult and no raised voice.",
+          "Ask for what you want once today instead of complaining about what you don't.",
+          "In one tense moment today, repeat back the other person's point before giving yours."
+        ]
+      },
+      {
+        "title": "Repair and prevent",
+        "tasks": [
+          "Apologize for one thing you said in anger. Name it plainly, no 'but'.",
+          "Identify your top trigger situation and write a specific plan for next time.",
+          "Deal with one thing that's been quietly building resentment before it explodes."
+        ]
+      },
+      {
+        "title": "Lower the baseline",
+        "tasks": [
+          "Do 20+ minutes of hard movement today — anger burns off in the body.",
+          "Protect your sleep or food today; note how much shorter your fuse is when either is off.",
+          "Cut one recurring source of daily aggravation (a commute, a feed, a person's messages)."
+        ]
+      },
+      {
+        "title": "Steady",
+        "tasks": [
+          "Handle one genuinely provoking moment today without raising your voice. Write down how.",
+          "Review the last two weeks: which triggers still get you, which don't anymore?",
+          "Tell someone close what you're working on and ask what they've noticed."
+        ]
+      }
+    ]
+  },
+  "money": {
+    "name": "Save Money",
+    "emoji": "💰",
+    "description": "From 'I don't know where it goes' to steady saving, in small steps.",
+    "support_note": null,
+    "levels": [
+      {
+        "title": "Look at it",
+        "tasks": [
+          "Check your current balance and write it down. Looking is the whole task.",
+          "Write down everything you spent yesterday. Every coffee.",
+          "List your fixed monthly bills and total them. Just the number."
+        ]
+      },
+      {
+        "title": "Track the leaks",
+        "tasks": [
+          "Track every purchase today, no judgment. Note the amount and what it was for.",
+          "Find your 3 biggest non-essential spends from last month.",
+          "Check your subscriptions list and write down what each one costs per year."
+        ]
+      },
+      {
+        "title": "First cuts",
+        "tasks": [
+          "Cancel one subscription you don't really use. One is enough.",
+          "Have a no-spend day today: nothing beyond what's already paid for.",
+          "Skip one habitual purchase today and move that exact amount to savings."
+        ]
+      },
+      {
+        "title": "Make saving automatic",
+        "tasks": [
+          "Open or identify the account your savings will live in — separate from spending.",
+          "Set up an automatic transfer, however small ($5 counts), for the day you get paid.",
+          "Move any spare change/round-up amount into savings today."
+        ]
+      },
+      {
+        "title": "Spend on purpose",
+        "tasks": [
+          "Set a weekly limit for one category (eating out, takeout, shopping) and write it down.",
+          "Use a 24-hour rule today: anything non-essential goes on a list instead of in a cart.",
+          "Plan and buy your food for the next 3 days in one trip with a written list."
+        ]
+      },
+      {
+        "title": "Build the buffer",
+        "tasks": [
+          "Calculate what one month of your essentials costs — that's your emergency-fund target.",
+          "Add an extra one-off amount to savings today, whatever you can spare.",
+          "Sell or list one thing you don't use, and put the money straight into savings."
+        ]
+      },
+      {
+        "title": "Attack the drag",
+        "tasks": [
+          "List any debts with their interest rates, highest first. Facing it is today's task.",
+          "Make one extra payment (any size) toward your highest-interest debt.",
+          "Call one provider (phone, insurance, internet) and ask for a better rate."
+        ]
+      },
+      {
+        "title": "In control",
+        "tasks": [
+          "Compare this month's spending to your first week of tracking. Write down the change.",
+          "Raise your automatic transfer by a small amount you won't feel.",
+          "Write your next money goal and the date you want to hit it."
+        ]
+      }
+    ]
+  },
+  "meditation": {
+    "name": "Meditate Regularly",
+    "emoji": "🧘",
+    "description": "Build a real meditation habit starting at 60 seconds.",
+    "support_note": null,
+    "levels": [
+      {
+        "title": "One minute",
+        "tasks": [
+          "Sit still and follow your breath for 60 seconds. That's the whole thing.",
+          "Take 10 slow breaths with your eyes closed, counting each one.",
+          "Pick your spot and time for tomorrow's minute, and say it out loud."
+        ]
+      },
+      {
+        "title": "Three minutes",
+        "tasks": [
+          "Sit for 3 minutes following your breath. When your mind wanders, that's normal — come back.",
+          "Do 3 minutes of body scan: notice your feet, legs, chest, shoulders, face.",
+          "Do 3 minutes of just listening to whatever sounds are around you."
+        ]
+      },
+      {
+        "title": "Five minutes",
+        "tasks": [
+          "Sit 5 minutes with your breath. Count how many times you notice you've drifted — noticing is the skill.",
+          "Do a 5-minute guided session (any free app or video) and just follow along.",
+          "Meditate 5 minutes at the same time you did yesterday."
+        ]
+      },
+      {
+        "title": "Daily anchor",
+        "tasks": [
+          "Do 5-10 minutes attached to an existing habit (right after coffee, right after brushing teeth).",
+          "Meditate 10 minutes today and write one sentence about how your mind felt afterward.",
+          "Do 10 minutes with your phone in another room."
+        ]
+      },
+      {
+        "title": "Working with the mind",
+        "tasks": [
+          "Sit 10 minutes and label thoughts as they come: 'planning', 'worrying', 'remembering'. Then return.",
+          "Do 10 minutes of noting where you feel emotion in your body, without fixing it.",
+          "Sit 10 minutes when you're actually stressed or restless — not just when it's easy."
+        ]
+      },
+      {
+        "title": "Longer sits",
+        "tasks": [
+          "Meditate 15 minutes today, one sitting.",
+          "Do 15 minutes of loving-kindness: silently wish someone well, then yourself.",
+          "Do 15 minutes and stay through the urge to stop early. Note when it came."
+        ]
+      },
+      {
+        "title": "Off the cushion",
+        "tasks": [
+          "Do 10 minutes seated plus one mindful daily activity (eating or walking with full attention).",
+          "Take 3 conscious breaths before each meal today.",
+          "Notice one moment of reactivity today and use one breath before responding."
+        ]
+      },
+      {
+        "title": "A practice, not a task",
+        "tasks": [
+          "Meditate 20 minutes today.",
+          "Compare this week to your first minute-long sit — write down what's different.",
+          "Plan next month's practice: length, time, and what happens on days it falls apart."
+        ]
+      }
+    ]
+  },
+  "vaping": {
+    "name": "Quit Vaping / Smoking",
+    "emoji": "🚭",
+    "description": "Step down and out — nicotine cravings shrink faster than you think.",
+    "support_note": "Free help really does double your odds: in the US, call 1-800-QUIT-NOW or text QUIT to 47848. Nicotine replacement (patches, gum) is safe and effective — a pharmacist or doctor can advise.",
+    "levels": [
+      {
+        "title": "Honest count",
+        "tasks": [
+          "Count today's hits, cigarettes, or pods. Write the real number down.",
+          "Write one sentence about why quitting matters to you. Keep it visible.",
+          "Note your top 3 trigger moments (first thing, driving, after eating, stress, drinking)."
+        ]
+      },
+      {
+        "title": "Add friction",
+        "tasks": [
+          "Keep your vape or pack somewhere inconvenient today — another room, a bag, a drawer.",
+          "Delay your first one of the day by 30 minutes.",
+          "Tell one person you're quitting. Just one."
+        ]
+      },
+      {
+        "title": "Delay and swap",
+        "tasks": [
+          "When a craving hits today, set a 5-minute timer and drink water first. Cravings peak and pass.",
+          "Replace one usual session today with a 5-minute walk or 10 deep breaths.",
+          "Put together a craving kit for tomorrow: gum, water, toothpicks, a person to text."
+        ]
+      },
+      {
+        "title": "Cut the count",
+        "tasks": [
+          "Cut today's total by a third compared to your starting count.",
+          "Make one trigger situation nicotine-free today (the car, after meals, the morning).",
+          "Log each craving today: time, trigger, strength 1-10, what you did instead."
+        ]
+      },
+      {
+        "title": "Get support",
+        "tasks": [
+          "Look up one quit resource today — a quitline, an app, or nicotine replacement options.",
+          "Ask a pharmacist or doctor about patches or gum, or order/buy one form of replacement.",
+          "Pick your quit date, write it down, and tell one person what it is."
+        ]
+      },
+      {
+        "title": "First clean days",
+        "tasks": [
+          "Aim for a fully nicotine-free day. If you slip, write down what triggered it — data, not failure.",
+          "Get rid of one stash, spare, or backup you've been keeping 'just in case'.",
+          "Plan tonight's high-risk hours in advance: where you'll be, with whom, doing what."
+        ]
+      },
+      {
+        "title": "Through the hump",
+        "tasks": [
+          "Note one physical improvement you've felt (breath, taste, smell, sleep) and write it down.",
+          "Calculate what you've saved so far in money and decide where it goes.",
+          "Handle one social or stress situation nicotine-free today, with your plan ready."
+        ]
+      },
+      {
+        "title": "Non-smoker",
+        "tasks": [
+          "Write about yourself as someone who doesn't do this anymore — what's different?",
+          "Review your journey: worst craving survived, longest clean stretch, what worked.",
+          "Help or encourage one other person who's trying to quit."
+        ]
+      }
+    ]
+  },
   "custom": {
     "name": "Custom Goal",
     "emoji": "✨",

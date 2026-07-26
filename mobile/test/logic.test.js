@@ -4,38 +4,76 @@ import { readFileSync } from 'node:fs';
 
 import {
   GOAL_LIBRARY,
+  MAX_OFFSET,
   addDaysISO,
   computeStreak,
   currentLevelIndex,
+  heatmapRows,
+  levelOffset,
   levelsFor,
   makeGoal,
+  milestonesFor,
   paceLabel,
   taskForDay,
 } from '../src/logic.js';
 
-const fixture = JSON.parse(readFileSync(new URL('./pacing_fixture.json', import.meta.url), 'utf8'));
-const shieldsFixture = JSON.parse(
-  readFileSync(new URL('./shields_fixture.json', import.meta.url), 'utf8')
-);
+const load = (name) =>
+  JSON.parse(readFileSync(new URL(`./${name}.json`, import.meta.url), 'utf8'));
+
+const fixture = load('pacing_fixture');
+const shieldsFixture = load('shields_fixture');
+const milestonesFixture = load('milestones_fixture');
+const heatmapFixture = load('heatmap_fixture');
 
 const START = '2026-01-01';
-const goalFor = (category, total) => ({
+const goalFor = (category, total, extra = {}) => ({
   category,
   start_date: START,
   end_date: addDaysISO(START, total),
   completed_dates: [],
+  ...extra,
 });
 
-test('pacing matches the Python web app exactly', () => {
+test('pacing (including difficulty offset) matches the Python web app exactly', () => {
   for (const c of fixture) {
-    const goal = goalFor(c.category, c.total);
+    const goal = goalFor(c.category, c.total, { level_offset: c.offset });
     const today = addDaysISO(START, c.dayIndex);
     assert.equal(
       currentLevelIndex(goal, today),
       c.expectedLevel,
-      `${c.category} total=${c.total} day=${c.dayIndex}`
+      `${c.category} total=${c.total} day=${c.dayIndex} offset=${c.offset}`
     );
   }
+});
+
+test('difficulty offset is clamped and shifts the ladder both ways', () => {
+  const today = addDaysISO(START, 30);
+  const base = currentLevelIndex(goalFor('singing', 60), today);
+  assert.ok(currentLevelIndex(goalFor('singing', 60, { level_offset: 2 }), today) > base);
+  assert.ok(currentLevelIndex(goalFor('singing', 60, { level_offset: -2 }), today) < base);
+  // Out-of-range, garbage, and missing values must never throw or escape bounds.
+  const levels = GOAL_LIBRARY.singing.levels.length;
+  for (const bad of [99, -99, 'x', null, undefined, NaN, 1.7]) {
+    const lvl = currentLevelIndex(goalFor('singing', 60, { level_offset: bad }), today);
+    assert.ok(lvl >= 0 && lvl < levels, `offset=${bad} → ${lvl}`);
+  }
+  assert.equal(levelOffset({ level_offset: 99 }), MAX_OFFSET);
+  assert.equal(levelOffset({}), 0);
+});
+
+test('milestones match the Python web app exactly', () => {
+  for (const c of milestonesFixture) {
+    const { earned, upcoming } = milestonesFor(c.done);
+    assert.equal(earned.length, c.earnedCount, `done=${c.done} earned`);
+    assert.equal(upcoming ? upcoming[0] : null, c.upcoming, `done=${c.done} upcoming`);
+  }
+});
+
+test('heatmap grid matches the Python web app exactly', () => {
+  const rows = heatmapRows(heatmapFixture.goal, heatmapFixture.weeks, heatmapFixture.today);
+  assert.deepEqual(rows, heatmapFixture.rows);
+  assert.equal(rows.length, heatmapFixture.weeks);
+  assert.ok(rows.every((r) => r.length === 7));
 });
 
 test('2-month plan outpaces 1-year plan at day 30', () => {
@@ -119,10 +157,24 @@ test('makeGoal builds a valid goal with the right end date', () => {
 });
 
 test('library content is intact for every category', () => {
+  const keys = Object.keys(GOAL_LIBRARY);
+  assert.ok(keys.length >= 17, `expected the expanded library, got ${keys.length} areas`);
   for (const [key, area] of Object.entries(GOAL_LIBRARY)) {
+    assert.ok(area.emoji && area.name && area.description, key);
     assert.ok(area.levels.length >= 7, key);
     for (const level of area.levels) {
       assert.ok(level.title && level.tasks.length >= 2, `${key}/${level.title}`);
+      assert.ok(
+        level.tasks.every((t) => typeof t === 'string' && t.length > 10),
+        `${key}/${level.title} tasks`
+      );
     }
+  }
+  // New areas are reachable from the picker and paced like the originals.
+  for (const key of ['sleep', 'procrastination', 'anger', 'money', 'meditation', 'vaping']) {
+    assert.ok(GOAL_LIBRARY[key], `missing area: ${key}`);
+    const goal = goalFor(key, 60);
+    const { task } = taskForDay(goal, 0, addDaysISO(START, 5));
+    assert.ok(task.length > 10, key);
   }
 });

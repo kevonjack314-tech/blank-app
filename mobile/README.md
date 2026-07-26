@@ -31,10 +31,12 @@ rolls the window forward each time it opens. It runs entirely on the device —
 offline, no server. The first time you enable it, your phone asks for
 notification permission.
 
-Streak **shields** work here too: every 7 completed tasks earns one, and each
-auto-covers a single missed day. And custom goals created on the web app with
-an AI-generated plan carry their personalized ladder over through Supabase
-sync.
+Everything from the web app is here: streak **shields** (every 7 tasks earns
+one, each auto-covers a missed day), **adaptive difficulty** (the too easy /
+just right / too hard buttons shift the whole ladder), **milestone badges**, a
+**12-week heatmap**, and the **journal**. Custom goals created on the web app
+with an AI-generated plan carry their personalized ladder over through
+Supabase sync, and difficulty feedback syncs both ways.
 
 ## Publishing to the App Store / Google Play
 

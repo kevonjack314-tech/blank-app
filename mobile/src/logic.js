@@ -48,11 +48,21 @@ export function goalDays(goal, today = todayISO()) {
   return { total, dayIndex };
 }
 
+export const MAX_OFFSET = 3; // how far feedback can shift you from the timeline's pace
+
+// Persistent adjustment from "too easy" / "too hard" feedback.
+export function levelOffset(goal) {
+  const raw = Number(goal.level_offset || 0);
+  if (!Number.isFinite(raw)) return 0;
+  return Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, Math.trunc(raw)));
+}
+
 export function currentLevelIndex(goal, today = todayISO()) {
   const levels = levelsFor(goal);
   const { total, dayIndex } = goalDays(goal, today);
   const clamped = Math.min(Math.max(dayIndex, 0), total - 1);
-  return Math.min(levels.length - 1, Math.floor((clamped * levels.length) / total));
+  const paced = Math.floor((clamped * levels.length) / total);
+  return Math.max(0, Math.min(levels.length - 1, paced + levelOffset(goal)));
 }
 
 // Deterministic daily task: same task all day, variants rotate day to day.
@@ -107,6 +117,49 @@ export function computeStreak(goal, today = todayISO()) {
     day = addDaysISO(day, -1);
   }
   return { streak, shields: Math.max(shieldsEarned - used, 0) };
+}
+
+// Mirrors MILESTONES in streamlit_app.py.
+export const MILESTONES = [
+  [1, '🌱', 'First step'],
+  [3, '🌿', 'Three days in'],
+  [7, '⭐', 'One week'],
+  [14, '🔥', 'Two weeks'],
+  [30, '💪', 'Thirty tasks'],
+  [50, '🏅', 'Fifty strong'],
+  [75, '🚀', 'Seventy-five'],
+  [100, '💎', 'One hundred'],
+  [150, '👑', 'One-fifty'],
+  [200, '🏆', 'Two hundred'],
+];
+
+export function milestonesFor(doneCount) {
+  return {
+    earned: MILESTONES.filter(([n]) => doneCount >= n),
+    upcoming: MILESTONES.find(([n]) => doneCount < n) || null,
+  };
+}
+
+// Week rows (Monday-aligned) of 'done' | 'missed' | 'outside' for the heatmap.
+export function heatmapRows(goal, weeks = 12, today = todayISO()) {
+  const done = new Set(goal.completed_dates || []);
+  const [ty, tm, td] = today.split('-').map(Number);
+  const weekday = (new Date(ty, tm - 1, td).getDay() + 6) % 7; // Monday = 0
+  const end = addDaysISO(today, 6 - weekday);
+  const first = addDaysISO(end, -(weeks * 7 - 1));
+  const rows = [];
+  let day = first;
+  for (let w = 0; w < weeks; w++) {
+    const cells = [];
+    for (let d = 0; d < 7; d++) {
+      if (day < goal.start_date || day > today) cells.push('outside');
+      else if (done.has(day)) cells.push('done');
+      else cells.push('missed');
+      day = addDaysISO(day, 1);
+    }
+    rows.push(cells);
+  }
+  return rows;
 }
 
 export function goalOptions() {

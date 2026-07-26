@@ -3,432 +3,7560 @@
     "category": "singing",
     "total": 14,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "singing",
     "total": 14,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "singing",
     "total": 14,
     "dayIndex": 3,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "singing",
     "total": 14,
     "dayIndex": 7,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -3,
     "expectedLevel": 3
   },
   {
     "category": "singing",
     "total": 14,
     "dayIndex": 12,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 0,
     "expectedLevel": 6
   },
   {
     "category": "singing",
     "total": 14,
     "dayIndex": 13,
+    "offset": 1,
     "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -5,
+    "expectedLevel": 3
   },
   {
     "category": "singing",
     "total": 60,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "singing",
     "total": 60,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "singing",
     "total": 60,
     "dayIndex": 15,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "singing",
     "total": 60,
     "dayIndex": 30,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -3,
     "expectedLevel": 3
   },
   {
     "category": "singing",
     "total": 60,
     "dayIndex": 58,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 0,
     "expectedLevel": 6
   },
   {
     "category": "singing",
     "total": 60,
     "dayIndex": 59,
+    "offset": 1,
     "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -5,
+    "expectedLevel": 3
   },
   {
     "category": "singing",
     "total": 90,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "singing",
     "total": 90,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "singing",
     "total": 90,
     "dayIndex": 22,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "singing",
     "total": 90,
     "dayIndex": 45,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -3,
     "expectedLevel": 3
   },
   {
     "category": "singing",
     "total": 90,
     "dayIndex": 88,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 0,
     "expectedLevel": 6
   },
   {
     "category": "singing",
     "total": 90,
     "dayIndex": 89,
+    "offset": 1,
     "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -5,
+    "expectedLevel": 3
   },
   {
     "category": "singing",
     "total": 365,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "singing",
     "total": 365,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "singing",
     "total": 365,
     "dayIndex": 91,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "singing",
     "total": 365,
     "dayIndex": 182,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -3,
     "expectedLevel": 3
   },
   {
     "category": "singing",
     "total": 365,
     "dayIndex": 363,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 0,
     "expectedLevel": 6
   },
   {
     "category": "singing",
     "total": 365,
     "dayIndex": 364,
+    "offset": 1,
     "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "singing",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -5,
+    "expectedLevel": 3
   },
   {
     "category": "social_anxiety",
     "total": 14,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 14,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 14,
     "dayIndex": 3,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -3,
     "expectedLevel": 1
   },
   {
     "category": "social_anxiety",
     "total": 14,
     "dayIndex": 7,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -2,
     "expectedLevel": 4
   },
   {
     "category": "social_anxiety",
     "total": 14,
     "dayIndex": 12,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -1,
     "expectedLevel": 6
   },
   {
     "category": "social_anxiety",
     "total": 14,
     "dayIndex": 13,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 3,
     "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -5,
+    "expectedLevel": 4
   },
   {
     "category": "social_anxiety",
     "total": 60,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 60,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 60,
     "dayIndex": 15,
+    "offset": 0,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 3,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 5,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -2,
     "expectedLevel": 2
   },
   {
     "category": "social_anxiety",
     "total": 60,
     "dayIndex": 30,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -3,
     "expectedLevel": 4
   },
   {
     "category": "social_anxiety",
     "total": 60,
     "dayIndex": 58,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 0,
     "expectedLevel": 7
   },
   {
     "category": "social_anxiety",
     "total": 60,
     "dayIndex": 59,
+    "offset": 1,
     "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -5,
+    "expectedLevel": 4
   },
   {
     "category": "social_anxiety",
     "total": 90,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 90,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 90,
     "dayIndex": 22,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -3,
     "expectedLevel": 1
   },
   {
     "category": "social_anxiety",
     "total": 90,
     "dayIndex": 45,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -3,
     "expectedLevel": 4
   },
   {
     "category": "social_anxiety",
     "total": 90,
     "dayIndex": 88,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 0,
     "expectedLevel": 7
   },
   {
     "category": "social_anxiety",
     "total": 90,
     "dayIndex": 89,
+    "offset": 1,
     "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -5,
+    "expectedLevel": 4
   },
   {
     "category": "social_anxiety",
     "total": 365,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 365,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 365,
     "dayIndex": 91,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "social_anxiety",
     "total": 365,
     "dayIndex": 182,
-    "expectedLevel": 3
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -5,
+    "expectedLevel": 0
   },
   {
     "category": "social_anxiety",
     "total": 365,
     "dayIndex": 363,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 0,
     "expectedLevel": 7
   },
   {
     "category": "social_anxiety",
     "total": 365,
     "dayIndex": 364,
+    "offset": 1,
     "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "social_anxiety",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -5,
+    "expectedLevel": 4
   },
   {
     "category": "custom",
     "total": 14,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "custom",
     "total": 14,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "custom",
     "total": 14,
     "dayIndex": 3,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "custom",
     "total": 14,
     "dayIndex": 7,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -3,
     "expectedLevel": 3
   },
   {
     "category": "custom",
     "total": 14,
     "dayIndex": 12,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 0,
     "expectedLevel": 6
   },
   {
     "category": "custom",
     "total": 14,
     "dayIndex": 13,
+    "offset": 1,
     "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -5,
+    "expectedLevel": 3
   },
   {
     "category": "custom",
     "total": 60,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "custom",
     "total": 60,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "custom",
     "total": 60,
     "dayIndex": 15,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "custom",
     "total": 60,
     "dayIndex": 30,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -3,
     "expectedLevel": 3
   },
   {
     "category": "custom",
     "total": 60,
     "dayIndex": 58,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 0,
     "expectedLevel": 6
   },
   {
     "category": "custom",
     "total": 60,
     "dayIndex": 59,
+    "offset": 1,
     "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -5,
+    "expectedLevel": 3
   },
   {
     "category": "custom",
     "total": 90,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "custom",
     "total": 90,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "custom",
     "total": 90,
     "dayIndex": 22,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "custom",
     "total": 90,
     "dayIndex": 45,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -3,
     "expectedLevel": 3
   },
   {
     "category": "custom",
     "total": 90,
     "dayIndex": 88,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 0,
     "expectedLevel": 6
   },
   {
     "category": "custom",
     "total": 90,
     "dayIndex": 89,
+    "offset": 1,
     "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -5,
+    "expectedLevel": 3
   },
   {
     "category": "custom",
     "total": 365,
     "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "custom",
     "total": 365,
     "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -5,
     "expectedLevel": 0
   },
   {
     "category": "custom",
     "total": 365,
     "dayIndex": 91,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -2,
     "expectedLevel": 1
   },
   {
     "category": "custom",
     "total": 365,
     "dayIndex": 182,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -3,
     "expectedLevel": 3
   },
   {
     "category": "custom",
     "total": 365,
     "dayIndex": 363,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 0,
     "expectedLevel": 6
   },
   {
     "category": "custom",
     "total": 365,
     "dayIndex": 364,
+    "offset": 1,
     "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "custom",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 0,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 3,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 5,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -2,
+    "expectedLevel": 1
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "sleep",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 0,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 1,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 3,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 7,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 0,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 12,
+    "offset": -5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 14,
+    "dayIndex": 13,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 0,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 1,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 0,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 2,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 3,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": 5,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 15,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 30,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 58,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 60,
+    "dayIndex": 59,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 0,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 1,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 22,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 0,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 1,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 2,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -1,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -3,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 45,
+    "offset": -5,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 88,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 90,
+    "dayIndex": 89,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 0,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 0,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 1,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 2,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 3,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": 5,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 1,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 0,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 2,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -1,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -2,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": 5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 91,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 0,
+    "expectedLevel": 3
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 1,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -1,
+    "expectedLevel": 2
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -2,
+    "expectedLevel": 1
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 3,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -3,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": 5,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 182,
+    "offset": -5,
+    "expectedLevel": 0
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 363,
+    "offset": -5,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 0,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 1,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 2,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -1,
+    "expectedLevel": 6
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -2,
+    "expectedLevel": 5
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 3,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -3,
+    "expectedLevel": 4
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": 5,
+    "expectedLevel": 7
+  },
+  {
+    "category": "money",
+    "total": 365,
+    "dayIndex": 364,
+    "offset": -5,
+    "expectedLevel": 4
   }
 ]

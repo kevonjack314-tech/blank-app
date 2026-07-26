@@ -20,7 +20,12 @@ import {
   currentLevelIndex,
   goalDays,
   goalOptions,
+  heatmapRows,
+  levelOffset,
   levelsFor,
+  MAX_OFFSET,
+  MILESTONES,
+  milestonesFor,
   makeGoal,
   paceLabel,
   taskForDay,
@@ -222,6 +227,8 @@ function GoalScreen({ data, persist, goHome, goalId }) {
   const { levelIndex, levelTitle, task } = taskForDay(goal, easier ? -1 : 0);
   const pace = paceLabel(total, levels.length);
   const pct = Math.min(Math.max(dayIndex, 0) / total, 1);
+  const doneCount = (goal.completed_dates || []).length;
+  const milestoneHit = MILESTONES.find(([n]) => n === doneCount) || null;
 
   const update = (fn) => {
     const next = { ...data, goals: data.goals.map((g) => (g.id === goal.id ? fn({ ...g }) : g)) };
@@ -255,9 +262,10 @@ function GoalScreen({ data, persist, goHome, goalId }) {
           <View style={[styles.card, { backgroundColor: C.accentSoft }]}>
             <Text style={styles.cardTitle}>🎉 You made it to the end of your {total}-day journey!</Text>
             <Text style={styles.cardBody}>
-              You completed {(goal.completed_dates || []).length} daily tasks. Look how far you've come.
+              You completed {doneCount} daily tasks. Look how far you've come.
             </Text>
           </View>
+          <ProgressExtras goal={goal} doneCount={doneCount} />
           <TouchableOpacity
             style={styles.primaryBtn}
             onPress={() => update((g) => ({ ...g, end_date: addDaysISO(g.end_date, 30) }))}
@@ -276,10 +284,19 @@ function GoalScreen({ data, persist, goHome, goalId }) {
           {easier ? <Text style={styles.cardHint}>A gentler step from the previous level — still counts. 💚</Text> : null}
 
           {doneToday ? (
-            <View style={[styles.card, { backgroundColor: C.accentSoft }]}>
-              <Text style={styles.cardTitle}>✅ Done for today!</Text>
-              <Text style={styles.cardBody}>You showed up. That's the whole game.</Text>
-            </View>
+            <>
+              <View style={[styles.card, { backgroundColor: C.accentSoft }]}>
+                <Text style={styles.cardTitle}>✅ Done for today!</Text>
+                <Text style={styles.cardBody}>You showed up. That's the whole game.</Text>
+                {milestoneHit ? (
+                  <Text style={[styles.cardTitle, { marginTop: 10 }]}>
+                    {milestoneHit[1]} Milestone unlocked — {milestoneHit[2]}!
+                  </Text>
+                ) : null}
+              </View>
+              <FeedbackCard goal={goal} today={today} update={update} />
+              <NoteCard goal={goal} today={today} update={update} />
+            </>
           ) : (
             <>
               <View style={[styles.card, styles.taskCard]}>
@@ -303,8 +320,16 @@ function GoalScreen({ data, persist, goHome, goalId }) {
             </>
           )}
 
+          <ProgressExtras goal={goal} doneCount={doneCount} />
+
           <Text style={styles.sectionTitle}>🪜 Your ladder</Text>
           <View style={styles.card}>
+            {levelOffset(goal) ? (
+              <Text style={styles.cardHint}>
+                Your feedback has shifted you {Math.abs(levelOffset(goal))} level(s){' '}
+                {levelOffset(goal) > 0 ? 'harder' : 'gentler'} than the timeline's default pace.
+              </Text>
+            ) : null}
             {levels.map((lvl, i) => (
               <Text
                 key={lvl.title}
@@ -323,6 +348,14 @@ function GoalScreen({ data, persist, goHome, goalId }) {
           <Text style={styles.cardMeta}>
             Started {goal.start_date} · target {goal.end_date} · {Math.max(total - dayIndex, 0)} days left
           </Text>
+          {levelOffset(goal) ? (
+            <TouchableOpacity
+              style={styles.secondaryBtn}
+              onPress={() => update((g) => ({ ...g, level_offset: 0 }))}
+            >
+              <Text style={styles.secondaryTxt}>Reset difficulty to the timeline's pace</Text>
+            </TouchableOpacity>
+          ) : null}
           <TouchableOpacity
             style={[styles.secondaryBtn, { borderColor: C.danger }]}
             onPress={() =>
@@ -440,6 +473,139 @@ function AddGoalScreen({ data, persist, goHome, firstGoal }) {
   );
 }
 
+function FeedbackCard({ goal, today, update }) {
+  const given = (goal.feedback || {})[today];
+  const replies = {
+    harder: 'Noted — stepping it up. 💪',
+    ok: 'Great — keeping this pace. 👌',
+    easier: 'Noted — steps will stay gentler. 💚',
+  };
+  if (given) return <Text style={styles.cardHint}>{replies[given]}</Text>;
+
+  const choose = (value, delta) =>
+    update((g) => ({
+      ...g,
+      feedback: { ...(g.feedback || {}), [today]: value },
+      level_offset: Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, levelOffset(g) + delta)),
+    }));
+
+  return (
+    <View style={styles.card}>
+      <Text style={styles.cardTitle}>How did that feel?</Text>
+      <Text style={styles.cardHint}>Your answer changes the size of future steps.</Text>
+      <View style={[styles.rowBetween, { marginTop: 12 }]}>
+        {[
+          ['Too easy 💪', 'harder', 1],
+          ['Just right 👌', 'ok', 0],
+          ['Too hard 😮‍💨', 'easier', -1],
+        ].map(([label, value, delta]) => (
+          <TouchableOpacity key={value} style={styles.chip} onPress={() => choose(value, delta)}>
+            <Text style={styles.chipTxt}>{label}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+    </View>
+  );
+}
+
+function NoteCard({ goal, today, update }) {
+  const saved = (goal.notes || {})[today] || '';
+  const [text, setText] = useState(saved);
+  const dirty = text.trim() !== saved;
+
+  const save = () =>
+    update((g) => {
+      const notes = { ...(g.notes || {}) };
+      if (text.trim()) notes[today] = text.trim();
+      else delete notes[today];
+      return { ...g, notes };
+    });
+
+  return (
+    <View style={styles.card}>
+      <Text style={styles.cardTitle}>📝 How did it go?</Text>
+      <Text style={styles.cardHint}>
+        One line, optional. Reading these back later is how you see the change.
+      </Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Nervous but I did it. Easier than last week."
+        placeholderTextColor={C.sub}
+        value={text}
+        onChangeText={setText}
+        multiline
+      />
+      {dirty ? (
+        <TouchableOpacity style={styles.secondaryBtn} onPress={save}>
+          <Text style={styles.secondaryTxt}>Save note</Text>
+        </TouchableOpacity>
+      ) : saved ? (
+        <Text style={styles.cardHint}>Saved ✓</Text>
+      ) : null}
+    </View>
+  );
+}
+
+function ProgressExtras({ goal, doneCount }) {
+  const { earned, upcoming } = milestonesFor(doneCount);
+  const notes = goal.notes || {};
+  const noteDays = Object.keys(notes).sort().reverse();
+
+  return (
+    <>
+      <Text style={styles.sectionTitle}>
+        🏅 Milestones ({earned.length}/{MILESTONES.length})
+      </Text>
+      <View style={styles.card}>
+        {earned.length ? (
+          <Text style={styles.cardBody}>{earned.map(([, e, t]) => `${e} ${t}`).join('   ')}</Text>
+        ) : (
+          <Text style={styles.cardHint}>Complete your first task to unlock your first badge.</Text>
+        )}
+        {upcoming ? (
+          <Text style={styles.cardHint}>
+            Next: {upcoming[1]} {upcoming[2]} — {upcoming[0] - doneCount} more to go.
+          </Text>
+        ) : (
+          <Text style={styles.cardHint}>Every badge earned. Genuinely impressive. 🏆</Text>
+        )}
+      </View>
+
+      <Text style={styles.sectionTitle}>📅 Your last 12 weeks</Text>
+      <View style={styles.card}>
+        {heatmapRows(goal).map((week, i) => (
+          <View key={i} style={styles.hmRow}>
+            {week.map((cell, j) => (
+              <View
+                key={j}
+                style={[
+                  styles.hmCell,
+                  cell === 'done' && styles.hmDone,
+                  cell === 'missed' && styles.hmMissed,
+                ]}
+              />
+            ))}
+          </View>
+        ))}
+        <Text style={styles.cardHint}>Mon → Sun, one row per week. Green = you showed up.</Text>
+      </View>
+
+      {noteDays.length ? (
+        <>
+          <Text style={styles.sectionTitle}>📖 Your journey ({noteDays.length})</Text>
+          <View style={styles.card}>
+            {noteDays.slice(0, 20).map((day) => (
+              <Text key={day} style={styles.journeyRow}>
+                <Text style={styles.journeyDay}>{day}</Text> — {notes[day]}
+              </Text>
+            ))}
+          </View>
+        </>
+      ) : null}
+    </>
+  );
+}
+
 function Metric({ label, value }) {
   return (
     <View style={styles.metric}>
@@ -539,6 +705,27 @@ const styles = StyleSheet.create({
   ladderRow: { fontSize: 14, color: C.sub, paddingVertical: 5 },
   ladderNow: { color: C.ink, fontWeight: '700' },
   ladderDone: { color: C.accent },
+  chip: {
+    flex: 1,
+    marginHorizontal: 3,
+    backgroundColor: C.accentSoft,
+    borderRadius: 10,
+    paddingVertical: 10,
+    alignItems: 'center',
+  },
+  chipTxt: { color: C.accent, fontWeight: '700', fontSize: 13, textAlign: 'center' },
+  hmRow: { flexDirection: 'row', marginBottom: 3 },
+  hmCell: {
+    flex: 1,
+    aspectRatio: 1,
+    marginRight: 3,
+    borderRadius: 3,
+    backgroundColor: 'transparent',
+  },
+  hmDone: { backgroundColor: C.accent },
+  hmMissed: { backgroundColor: C.line },
+  journeyRow: { fontSize: 14, color: C.ink, paddingVertical: 5, lineHeight: 20 },
+  journeyDay: { fontWeight: '700', color: C.sub },
   timeBtn: {
     backgroundColor: C.accentSoft,
     borderRadius: 10,
