@@ -159,6 +159,9 @@ export function heatmapRows(goal, weeks = 12, today = todayISO()) {
     }
     rows.push(cells);
   }
+  // Drop whole weeks that fall entirely before the journey began — a new goal
+  // shouldn't open on six rows of blank squares.
+  while (rows.length > 1 && rows[0].every((c) => c === 'outside')) rows.shift();
   return rows;
 }
 

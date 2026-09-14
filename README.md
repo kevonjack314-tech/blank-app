@@ -35,6 +35,8 @@ Features:
 - 📖 An optional one-line journal per task, so you can reread week 1 and see the change
 - 💚 "Too big today" button that swaps in a gentler step for a single day
 - 🎉 End-of-journey celebration with the option to extend 30 days
+- 📱 Built for a phone first: today's task and a big check-off button are the
+  whole home screen, with everything else tucked into collapsible sections
 
 ### Saving your progress
 
@@ -88,6 +90,14 @@ Each generated plan is one API call (typically a fraction of a cent) and is
 stored with the goal, so it's never regenerated — and the mobile app picks it
 up automatically through Supabase sync. Without a key, everything still works
 with the generic ladder.
+
+### Running the tests
+
+```
+$ python3 tests/test_app.py           # the app end to end
+$ python3 tests/test_integrations.py  # Supabase sync + AI ladders (fake servers)
+$ cd mobile && npm test               # shared logic, incl. web/mobile parity
+```
 
 ### How to run it on your own machine
 

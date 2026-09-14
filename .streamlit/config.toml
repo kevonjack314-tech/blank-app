@@ -1,0 +1,13 @@
+# Brand colours shared with the mobile app's icon and UI.
+[theme]
+primaryColor = "#2e7d4f"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f7f4"
+textColor = "#1c2b21"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Hide the "Deploy"/dev toolbar — this is a daily-use app, not a dev preview.
+toolbarMode = "minimal"

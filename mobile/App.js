@@ -110,7 +110,32 @@ function Header({ title, subtitle, onBack }) {
   );
 }
 
-function HomeScreen({ data, setScreen, cloudNote }) {
+function HomeScreen({ data, persist, setScreen, cloudNote }) {
+  // Check today's task off (or undo it) without leaving the home screen —
+  // the whole daily loop is one tap from launching the app.
+  const toggleToday = (goal) => {
+    const today = todayISO();
+    const done = (goal.completed_dates || []).includes(today);
+    persist({
+      ...data,
+      goals: data.goals.map((g) =>
+        g.id !== goal.id
+          ? g
+          : {
+              ...g,
+              completed_dates: done
+                ? (g.completed_dates || []).filter((d) => d !== today)
+                : [...(g.completed_dates || []), today],
+              feedback: done
+                ? Object.fromEntries(
+                    Object.entries(g.feedback || {}).filter(([d]) => d !== today)
+                  )
+                : g.feedback,
+            }
+      ),
+    });
+  };
+
   const today = todayISO();
   const doneCount = data.goals.filter((g) => (g.completed_dates || []).includes(today)).length;
   const allDone = doneCount === data.goals.length;
@@ -126,32 +151,75 @@ function HomeScreen({ data, setScreen, cloudNote }) {
         }
       />
       {cloudNote ? <Note text={cloudNote} /> : null}
-      {data.goals.map((g) => {
-        const lib = GOAL_LIBRARY[g.category];
-        const done = (g.completed_dates || []).includes(today);
-        const { total, dayIndex } = goalDays(g);
-        const { streak } = computeStreak(g);
-        return (
-          <TouchableOpacity key={g.id} style={styles.card} onPress={() => setScreen({ name: 'goal', goalId: g.id })}>
-            <View style={styles.rowBetween}>
-              <Text style={styles.cardTitle}>
-                {lib.emoji} {g.name}
-              </Text>
-              <Text style={{ fontSize: 20 }}>{done ? '✅' : '📌'}</Text>
-            </View>
-            <Text style={styles.cardMeta}>
-              Day {Math.min(dayIndex + 1, total)} of {total} · 🔥 {streak} streak
-            </Text>
-            <ProgressBar pct={Math.min(Math.max(dayIndex, 0) / total, 1)} />
-            <Text style={styles.cardHint}>{done ? 'Done for today — tap to review' : "Tap for today's tiny step"}</Text>
-          </TouchableOpacity>
-        );
-      })}
+      {data.goals.map((g) => (
+        <TodayCard
+          key={g.id}
+          goal={g}
+          today={today}
+          onOpen={() => setScreen({ name: 'goal', goalId: g.id })}
+          onToggle={() => toggleToday(g)}
+        />
+      ))}
       <TouchableOpacity style={styles.secondaryBtn} onPress={() => setScreen({ name: 'add' })}>
         <Text style={styles.secondaryTxt}>➕ Work on something else too</Text>
       </TouchableOpacity>
       <ReminderCard goals={data.goals} />
     </ScrollView>
+  );
+}
+
+function TodayCard({ goal, today, onOpen, onToggle }) {
+  const lib = GOAL_LIBRARY[goal.category];
+  const done = (goal.completed_dates || []).includes(today);
+  const { total, dayIndex } = goalDays(goal);
+  const { streak, shields } = computeStreak(goal);
+  const finished = dayIndex >= total;
+  const { levelIndex, task } = taskForDay(goal, 0);
+  const levels = levelsFor(goal);
+
+  const chips = [`Day ${Math.min(dayIndex + 1, total)}/${total}`];
+  if (streak) chips.push(`\u{1F525} ${streak}`);
+  if (shields) chips.push(`\u{1F6E1}\uFE0F ${shields}`);
+  if (!finished) chips.push(`Level ${levelIndex + 1}/${levels.length}`);
+
+  return (
+    <View style={[styles.card, done && styles.cardDone]}>
+      <TouchableOpacity onPress={onOpen} accessibilityRole="button">
+        <View style={styles.rowBetween}>
+          <Text style={styles.cardTitle}>
+            {lib.emoji} {goal.name}
+          </Text>
+          <Text style={styles.chevron}>›</Text>
+        </View>
+        <View style={styles.chipRow}>
+          {chips.map((c) => (
+            <Text key={c} style={styles.statChip}>
+              {c}
+            </Text>
+          ))}
+        </View>
+        {finished ? (
+          <Text style={styles.cardBody}>🎉 Journey complete — tap to review or extend.</Text>
+        ) : (
+          <>
+            <Text style={styles.taskLabel}>
+              {done ? '✅ DONE TODAY' : "📌 TODAY'S TINY STEP"}
+            </Text>
+            <Text style={[styles.taskTxt, done && styles.taskTxtDone]}>{task}</Text>
+          </>
+        )}
+      </TouchableOpacity>
+
+      {finished ? null : done ? (
+        <TouchableOpacity style={styles.undoBtn} onPress={onToggle}>
+          <Text style={styles.undoTxt}>↩️ Undo</Text>
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity style={[styles.primaryBtn, { marginTop: 14 }]} onPress={onToggle}>
+          <Text style={styles.primaryTxt}>I did it ✅</Text>
+        </TouchableOpacity>
+      )}
+    </View>
   );
 }
 
@@ -296,6 +364,20 @@ function GoalScreen({ data, persist, goHome, goalId }) {
               </View>
               <FeedbackCard goal={goal} today={today} update={update} />
               <NoteCard goal={goal} today={today} update={update} />
+              <TouchableOpacity
+                style={styles.undoBtn}
+                onPress={() =>
+                  update((g) => ({
+                    ...g,
+                    completed_dates: (g.completed_dates || []).filter((d) => d !== today),
+                    feedback: Object.fromEntries(
+                      Object.entries(g.feedback || {}).filter(([d]) => d !== today)
+                    ),
+                  }))
+                }
+              >
+                <Text style={styles.undoTxt}>↩️ Undo today's check-in</Text>
+              </TouchableOpacity>
             </>
           ) : (
             <>
@@ -705,6 +787,22 @@ const styles = StyleSheet.create({
   ladderRow: { fontSize: 14, color: C.sub, paddingVertical: 5 },
   ladderNow: { color: C.ink, fontWeight: '700' },
   ladderDone: { color: C.accent },
+  cardDone: { backgroundColor: '#f7faf8' },
+  chevron: { fontSize: 24, color: C.sub, marginLeft: 8 },
+  chipRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 8, marginBottom: 4 },
+  statChip: {
+    backgroundColor: C.accentSoft,
+    color: C.accent,
+    fontWeight: '700',
+    fontSize: 12,
+    borderRadius: 999,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    overflow: 'hidden',
+  },
+  taskTxtDone: { textDecorationLine: 'line-through', color: C.sub },
+  undoBtn: { alignSelf: 'flex-start', marginTop: 12, paddingVertical: 8, paddingHorizontal: 4 },
+  undoTxt: { color: C.sub, fontWeight: '600', fontSize: 14 },
   chip: {
     flex: 1,
     marginHorizontal: 3,

@@ -1,3 +1,4 @@
+import html
 from datetime import date, datetime, timedelta
 
 import streamlit as st
@@ -131,7 +132,11 @@ def milestones_for(done_count):
 
 
 def heatmap_rows(goal, weeks=12):
-    """Week rows of 🟩/⬜/·  for the last `weeks` weeks, Monday-aligned."""
+    """Week rows (Monday-aligned) of 'done' | 'missed' | 'outside' cells.
+
+    Returns the same structure as heatmapRows() in mobile/src/logic.js so both
+    apps draw an identical grid; each surface picks its own colours.
+    """
     done = set(goal.get("completed_dates", []))
     start = date.fromisoformat(goal["start_date"])
     today = date.today()
@@ -144,14 +149,58 @@ def heatmap_rows(goal, weeks=12):
         cells = []
         for _ in range(7):
             if day < start or day > today:
-                cells.append("·")  # outside the journey
+                cells.append("outside")
             elif day.isoformat() in done:
-                cells.append("🟩")
+                cells.append("done")
             else:
-                cells.append("⬜")
+                cells.append("missed")
             day += timedelta(days=1)
-        rows.append("".join(cells))
+        rows.append(cells)
+    # Drop whole weeks that fall entirely before the journey began — a new goal
+    # shouldn't open on six rows of blank squares.
+    while len(rows) > 1 and all(c == "outside" for c in rows[0]):
+        rows.pop(0)
     return rows
+
+
+# ------------------------------------------------------------------ chrome ---
+
+def esc(text):
+    return html.escape(str(text))
+
+
+MOBILE_CSS = """
+<style>
+/* Phone-first layout: narrow gutters, room for thumbs, no sideways scroll. */
+.block-container {max-width: 46rem; padding-top: 2.4rem; padding-bottom: 4rem;}
+@media (max-width: 640px) {
+  .block-container {padding-left: .85rem; padding-right: .85rem; padding-top: 1.5rem;}
+  h1 {font-size: 1.65rem !important;}
+}
+section.main {overflow-x: hidden;}
+.stButton > button {min-height: 46px; border-radius: 12px; font-weight: 600;}
+
+/* Today card */
+.ts-card {background: rgba(46,125,79,.06); border: 1px solid rgba(46,125,79,.18);
+          border-radius: 16px; padding: 14px 16px 16px; margin: 4px 0 12px;}
+.ts-card.ts-done {background: rgba(0,0,0,.03); border-color: rgba(0,0,0,.08);}
+.ts-title {font-size: 1.05rem; font-weight: 800; margin: 0 0 8px;}
+.ts-chips {display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;}
+.ts-chip {background: rgba(46,125,79,.14); color: #2e7d4f; border-radius: 999px;
+          padding: 3px 10px; font-size: .78rem; font-weight: 700; white-space: nowrap;}
+.ts-label {font-size: .7rem; letter-spacing: .09em; text-transform: uppercase;
+           opacity: .6; font-weight: 800; margin: 0 0 4px;}
+.ts-task {font-size: 1.12rem; line-height: 1.5; font-weight: 600; margin: 0;}
+.ts-done .ts-task {text-decoration: line-through; opacity: .6; font-weight: 500;}
+
+/* Heatmap: seven square columns that always fit the screen */
+.ts-hm {display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; max-width: 320px;}
+.ts-hm i {aspect-ratio: 1; border-radius: 3px; display: block;}
+.ts-hm .d {background: #2e7d4f;}
+.ts-hm .m {background: rgba(0,0,0,.10);}
+.ts-hm .o {background: rgba(0,0,0,.02);}
+</style>
+"""
 
 
 # ---------------------------------------------------------------- add goal ---
@@ -159,8 +208,8 @@ def heatmap_rows(goal, weeks=12):
 def render_add_goal(first_goal=False):
     if first_goal:
         st.markdown(
-            "Pick something you want to get better at. Every day you'll get **one small task** — "
-            "the size of the steps depends on how much time you give yourself."
+            "Pick something you want to get better at. Every day you'll get "
+            "**one small task** — starting so easy it feels silly."
         )
     options = get_goal_options()
     labels = [label for _, label in options]
@@ -222,7 +271,7 @@ def render_add_goal(first_goal=False):
         st.rerun()
 
 
-# --------------------------------------------------------------- goal view ---
+# ----------------------------------------------------------- today's card ---
 
 def render_feedback(goal, today_iso):
     """Ask how the step felt, once per completed day, and adapt the pace."""
@@ -265,11 +314,11 @@ def render_note(goal, today_iso):
     if key not in st.session_state:
         st.session_state[key] = notes.get(today_iso, "")
     st.text_input(
-        "📝 One line about how it went (optional)",
+        "One line about how it went",
         key=key,
         placeholder="Nervous but I did it. Easier than last week.",
     )
-    if st.button("Save note", key=f"save_{key}"):
+    if st.button("Save note", key=f"save_{key}", use_container_width=True):
         text = st.session_state.get(key, "").strip()
         if text:
             notes[today_iso] = text
@@ -279,10 +328,156 @@ def render_note(goal, today_iso):
         st.rerun()
 
 
-def render_progress_extras(goal, days_done):
-    earned, upcoming = milestones_for(days_done)
+def card_html(goal, chips, label, task, done):
+    lib = GOAL_LIBRARY[goal["category"]]
+    chip_html = "".join(f'<span class="ts-chip">{esc(c)}</span>' for c in chips)
+    return (
+        f'<div class="ts-card{" ts-done" if done else ""}">'
+        f'<p class="ts-title">{lib["emoji"]} {esc(goal["name"])}</p>'
+        f'<div class="ts-chips">{chip_html}</div>'
+        f'<p class="ts-label">{esc(label)}</p>'
+        f'<p class="ts-task">{esc(task)}</p>'
+        f"</div>"
+    )
 
-    with st.expander(f"🏅 Milestones ({len(earned)}/{len(MILESTONES)})", expanded=bool(earned)):
+
+def render_finished(goal, total, days_done):
+    st.markdown(
+        card_html(
+            goal,
+            [f"{total} days", f"{days_done} tasks done"],
+            "journey complete",
+            "You made it to the end. Look how far you've come. 🎉",
+            done=True,
+        ),
+        unsafe_allow_html=True,
+    )
+    c1, c2 = st.columns(2)
+    if c1.button("Keep going — +30 days", key=f"ext_{goal['id']}",
+                 type="primary", use_container_width=True):
+        goal["end_date"] = (date.fromisoformat(goal["end_date"]) + timedelta(days=30)).isoformat()
+        save_data(st.session_state.data)
+        st.rerun()
+    if c2.button("Finish & remove", key=f"fin_{goal['id']}", use_container_width=True):
+        st.session_state.data["goals"] = [
+            g for g in st.session_state.data["goals"] if g["id"] != goal["id"]
+        ]
+        save_data(st.session_state.data)
+        st.rerun()
+
+
+def render_goal_card(goal):
+    """The whole daily loop — see today's step and check it off — in one card."""
+    lib = GOAL_LIBRARY[goal["category"]]
+    total, day_index = goal_days(goal)
+    today_iso = date.today().isoformat()
+    completed = goal.get("completed_dates", [])
+    done_today = today_iso in completed
+    days_done = len(completed)
+
+    if day_index >= total:
+        render_finished(goal, total, days_done)
+        return
+
+    streak, shields = compute_streak(goal)
+    easier = st.session_state.get(f"easier_{goal['id']}", False)
+    lvl_idx, lvl_title, task = task_for_day(goal, level_offset=-1 if easier else 0)
+    levels = levels_for(goal)
+
+    chips = [f"Day {min(day_index + 1, total)}/{total}"]
+    if streak:
+        chips.append(f"🔥 {streak}")
+    if shields:
+        chips.append(f"🛡️ {shields}")
+    chips.append(f"Level {lvl_idx + 1}/{len(levels)}: {lvl_title}")
+
+    st.markdown(
+        card_html(
+            goal,
+            chips,
+            "✅ done today" if done_today else "📌 today's tiny step",
+            task,
+            done_today,
+        ),
+        unsafe_allow_html=True,
+    )
+
+    if easier and not done_today:
+        st.caption("A gentler step from the previous level — it still counts. 💚")
+
+    if done_today:
+        hit = next((m for m in MILESTONES if m[0] == days_done), None)
+        if hit:
+            st.success(f"{hit[1]} **Milestone unlocked — {hit[2]}!** {days_done} tasks done.")
+        render_feedback(goal, today_iso)
+        with st.expander("📝 Add a note about today"):
+            render_note(goal, today_iso)
+        u1, _ = st.columns([1, 2])
+        if u1.button("↩️ Undo", key=f"undo_{goal['id']}", use_container_width=True,
+                     help="Checked in by mistake? This removes today's check-in."):
+            goal["completed_dates"] = [d for d in completed if d != today_iso]
+            goal.get("feedback", {}).pop(today_iso, None)
+            save_data(st.session_state.data)
+            st.rerun()
+    else:
+        if st.button("I did it ✅", key=f"done_{goal['id']}",
+                     type="primary", use_container_width=True):
+            goal.setdefault("completed_dates", []).append(today_iso)
+            save_data(st.session_state.data)
+            st.session_state.pop(f"easier_{goal['id']}", None)
+            st.balloons()
+            st.rerun()
+        if lvl_idx > 0 and not easier:
+            if st.button("Too big today — give me a smaller step",
+                         key=f"ez_{goal['id']}", use_container_width=True):
+                st.session_state[f"easier_{goal['id']}"] = True
+                st.rerun()
+
+    if lib.get("support_note"):
+        st.warning(lib["support_note"], icon="💛")
+
+
+# ------------------------------------------------------- progress & setup ---
+
+HM_CLASS = {"done": "d", "missed": "m", "outside": "o"}
+
+
+def render_heatmap(goal):
+    cells = "".join(
+        f'<i class="{HM_CLASS[cell]}"></i>'
+        for row in heatmap_rows(goal)
+        for cell in row
+    )
+    st.markdown(f'<div class="ts-hm">{cells}</div>', unsafe_allow_html=True)
+    st.caption("Mon → Sun, one row per week. Green = you showed up.")
+
+
+def render_details(goal):
+    """Everything that isn't today: stats, badges, history, ladder, settings."""
+    total, day_index = goal_days(goal)
+    completed = goal.get("completed_dates", [])
+    days_done = len(completed)
+    streak, shields = compute_streak(goal)
+    earned, upcoming = milestones_for(days_done)
+    levels = levels_for(goal)
+    lvl_now = current_level_index(goal)
+
+    with st.expander("📊 Progress"):
+        # Chips rather than st.metric: metrics stack to one per row on a phone,
+        # turning three numbers into a long scroll.
+        stats = [f"🔥 {streak} streak", f"🛡️ {shields} shields", f"✅ {days_done} tasks done"]
+        st.markdown(
+            '<div class="ts-chips">'
+            + "".join(f'<span class="ts-chip">{esc(s)}</span>' for s in stats)
+            + "</div>",
+            unsafe_allow_html=True,
+        )
+        st.caption("🛡️ Every 7 completed tasks earns a shield that auto-covers one missed day.")
+
+        pct = min(max(day_index, 0) / total, 1.0)
+        st.progress(pct, text=f"{int(pct * 100)}% through your {total}-day timeline")
+
+        st.markdown(f"**🏅 Milestones ({len(earned)}/{len(MILESTONES)})**")
         if earned:
             st.markdown(" ".join(f"{e[1]} **{e[2]}**" for e in earned))
         else:
@@ -295,12 +490,8 @@ def render_progress_extras(goal, days_done):
         else:
             st.caption("Every badge earned. Genuinely impressive. 🏆")
 
-    with st.expander("📅 Your last 12 weeks"):
-        st.caption("Mon → Sun, one row per week. 🟩 done · ⬜ missed")
-        st.markdown(
-            "\n".join(f"<div style='letter-spacing:2px'>{r}</div>" for r in heatmap_rows(goal)),
-            unsafe_allow_html=True,
-        )
+        st.markdown("**📅 Your last 12 weeks**")
+        render_heatmap(goal)
 
     notes = goal.get("notes", {})
     if notes:
@@ -309,151 +500,79 @@ def render_progress_extras(goal, days_done):
             for day in sorted(notes, reverse=True):
                 st.markdown(f"**{day}** — {notes[day]}")
 
-
-def render_goal(goal):
-    lib = GOAL_LIBRARY[goal["category"]]
-    total, day_index = goal_days(goal)
-    today_iso = date.today().isoformat()
-    done_today = today_iso in goal.get("completed_dates", [])
-    finished = day_index >= total
-    streak, shields = compute_streak(goal)
-    days_done = len(goal.get("completed_dates", []))
-
-    st.subheader(f"{lib['emoji']} {goal['name']}")
-
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Day", f"{min(day_index + 1, total)} / {total}")
-    c2.metric("Streak", f"🔥 {streak}")
-    c3.metric("Shields", f"🛡️ {shields}")
-    c4.metric("Tasks done", days_done)
-    st.caption("🛡️ Every 7 completed tasks earns a shield that auto-covers one missed day.")
-
-    pct = min(max(day_index, 0) / total, 1.0)
-    st.progress(pct, text=f"{int(pct * 100)}% through your timeline")
-
-    if lib.get("support_note"):
-        st.warning(lib["support_note"], icon="💛")
-
-    if finished:
-        st.success(
-            f"🎉 **You made it to the end of your {total}-day journey!** "
-            f"You completed {days_done} daily tasks. Look how far you've come."
-        )
-        render_progress_extras(goal, days_done)
-        col_a, col_b = st.columns(2)
-        if col_a.button("Keep going — extend 30 days", key=f"ext_{goal['id']}", use_container_width=True):
-            goal["end_date"] = (date.fromisoformat(goal["end_date"]) + timedelta(days=30)).isoformat()
-            save_data(st.session_state.data)
-            st.rerun()
-        if col_b.button("Finish & remove this goal", key=f"fin_{goal['id']}", use_container_width=True):
-            st.session_state.data["goals"] = [
-                g for g in st.session_state.data["goals"] if g["id"] != goal["id"]
-            ]
-            save_data(st.session_state.data)
-            st.rerun()
-        return
-
-    # --- today's task ---
-    easier = st.session_state.get(f"easier_{goal['id']}", False)
-    lvl_idx, lvl_title, task = task_for_day(goal, level_offset=-1 if easier else 0)
-    num_levels = len(levels_for(goal))
-    pace, _ = pace_label(total, num_levels)
-
-    st.markdown(f"**Level {lvl_idx + 1} of {num_levels}: {lvl_title}** · {pace}")
-    if easier:
-        st.caption("Showing a gentler step from the previous level — still counts. 💚")
-
-    if done_today:
-        st.success(f"✅ **Done for today!** You showed up. That's the whole game.\n\n~~{task}~~")
-        hit = next((m for m in MILESTONES if m[0] == days_done), None)
-        if hit:
-            st.success(f"{hit[1]} **Milestone unlocked — {hit[2]}!** {days_done} tasks done.")
-        render_feedback(goal, today_iso)
-        render_note(goal, today_iso)
-    else:
-        st.info(f"### 📌 Today's tiny step\n\n{task}")
-        b1, b2 = st.columns([2, 1])
-        if b1.button("I did it ✅", key=f"done_{goal['id']}", type="primary", use_container_width=True):
-            goal.setdefault("completed_dates", []).append(today_iso)
-            save_data(st.session_state.data)
-            st.session_state.pop(f"easier_{goal['id']}", None)
-            st.balloons()
-            st.rerun()
-        if lvl_idx > 0 and not easier:
-            if b2.button("Too big today", key=f"ez_{goal['id']}", use_container_width=True,
-                         help="Get a smaller step from the previous level instead"):
-                st.session_state[f"easier_{goal['id']}"] = True
-                st.rerun()
-
-    render_progress_extras(goal, days_done)
-
-    # --- ladder overview ---
-    with st.expander("🪜 See your full ladder"):
+    with st.expander("🪜 Your ladder"):
         off = level_offset(goal)
         if off:
-            direction = "harder" if off > 0 else "gentler"
             st.caption(
-                f"Your feedback has shifted you {abs(off)} level(s) {direction} than the timeline's default pace."
+                f"Your feedback has shifted you {abs(off)} level(s) "
+                f"{'harder' if off > 0 else 'gentler'} than the timeline's default pace."
             )
-        for i, level in enumerate(levels_for(goal)):
-            if i < lvl_idx:
+        for i, level in enumerate(levels):
+            if i < lvl_now:
                 st.markdown(f"~~**Level {i + 1}: {level['title']}**~~ ✅")
-            elif i == lvl_idx:
+            elif i == lvl_now:
                 st.markdown(f"➡️ **Level {i + 1}: {level['title']}** ← you are here")
             else:
                 st.markdown(f"🔒 Level {i + 1}: {level['title']}")
 
-    with st.expander("⚙️ Goal settings"):
+    with st.expander("⚙️ Settings"):
         st.caption(
             f"Started {goal['start_date']} · target {goal['end_date']} · "
             f"{max(total - day_index, 0)} days left"
         )
         if level_offset(goal) and st.button(
-            "Reset difficulty to the timeline's pace", key=f"rst_{goal['id']}"
+            "Reset difficulty to the timeline's pace", key=f"rst_{goal['id']}",
+            use_container_width=True,
         ):
             goal["level_offset"] = 0
             save_data(st.session_state.data)
             st.rerun()
-        if st.button("Delete this goal", key=f"del_{goal['id']}"):
-            st.session_state.data["goals"] = [
-                g for g in st.session_state.data["goals"] if g["id"] != goal["id"]
-            ]
-            save_data(st.session_state.data)
+
+        confirm_key = f"confirm_del_{goal['id']}"
+        if st.session_state.get(confirm_key):
+            st.warning(f"Delete **{goal['name']}** and its {days_done} completed tasks? "
+                       "This can't be undone.")
+            d1, d2 = st.columns(2)
+            if d1.button("Yes, delete", key=f"del_yes_{goal['id']}", use_container_width=True):
+                st.session_state.data["goals"] = [
+                    g for g in st.session_state.data["goals"] if g["id"] != goal["id"]
+                ]
+                save_data(st.session_state.data)
+                st.session_state.pop(confirm_key, None)
+                st.rerun()
+            if d2.button("Cancel", key=f"del_no_{goal['id']}", use_container_width=True):
+                st.session_state.pop(confirm_key, None)
+                st.rerun()
+        elif st.button("Delete this goal", key=f"del_{goal['id']}", use_container_width=True):
+            st.session_state[confirm_key] = True
             st.rerun()
 
 
 # --------------------------------------------------------------------- app ---
 
+st.markdown(MOBILE_CSS, unsafe_allow_html=True)
 st.title("🌱 Tiny Steps")
-st.caption("Get better at anything — one baby step a day.")
 
 goals = st.session_state.data["goals"]
 
 if not goals:
+    st.caption("Get better at anything — one baby step a day.")
     render_add_goal(first_goal=True)
 else:
-    done_today = sum(1 for g in goals if date.today().isoformat() in g.get("completed_dates", []))
-    if done_today == len(goals):
-        st.success(f"All {len(goals)} task(s) done today. Rest easy — you earned it. 😌")
+    today_iso = date.today().isoformat()
+    done_today = sum(1 for g in goals if today_iso in g.get("completed_dates", []))
+    active = [g for g in goals if goal_days(g)[1] < goal_days(g)[0]]
+    if active and done_today >= len(active):
+        st.success("Everything done today. Rest easy — you earned it. 😌")
     else:
-        st.caption(f"✅ {done_today} of {len(goals)} tasks done today")
+        st.caption(f"✅ {done_today} of {len(active)} done today")
 
-    if len(goals) == 1:
-        render_goal(goals[0])
-    else:
-        tabs = st.tabs([f"{GOAL_LIBRARY[g['category']]['emoji']} {g['name']}" for g in goals])
-        for tab, goal in zip(tabs, goals):
-            with tab:
-                render_goal(goal)
+    for i, goal in enumerate(goals):
+        render_goal_card(goal)
+        render_details(goal)
+        if i < len(goals) - 1:
+            st.divider()
 
     st.divider()
-    if st.session_state.get("adding_goal"):
-        st.markdown("### ➕ Add another goal")
+    with st.expander("➕ Work on something else too"):
         render_add_goal()
-        if st.button("Cancel"):
-            st.session_state.pop("adding_goal", None)
-            st.rerun()
-    else:
-        if st.button("➕ Work on something else too"):
-            st.session_state["adding_goal"] = True
-            st.rerun()

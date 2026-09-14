@@ -18,6 +18,11 @@ the web app — verified by tests that compare both implementations.
 4. Scan the QR code that appears — iPhone: with the Camera app; Android: with
    Expo Go. The app opens on your phone, and edits reload live.
 
+The home screen shows each goal's task for today with an **I did it** button
+right there, so the daily loop is one tap from launching the app (with an undo
+if you tap it by mistake). Tap a card for the ladder, stats, heatmap, journal
+and settings.
+
 Progress is saved on the device. To sync with the web app's Supabase database
 (so phone and web share one set of goals), open `src/config.js` and paste in
 the same `SUPABASE_URL` and anon key you used for the web app.
