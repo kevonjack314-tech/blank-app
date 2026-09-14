@@ -1,0 +1,68 @@
+{
+  "today": "2026-03-10",
+  "weeks": 6,
+  "goal": {
+    "start_date": "2026-02-01",
+    "completed_dates": [
+      "2026-03-09",
+      "2026-03-05",
+      "2026-02-02"
+    ]
+  },
+  "rows": [
+    [
+      "done",
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed"
+    ],
+    [
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed"
+    ],
+    [
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed"
+    ],
+    [
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed",
+      "missed"
+    ],
+    [
+      "missed",
+      "missed",
+      "missed",
+      "done",
+      "missed",
+      "missed",
+      "missed"
+    ],
+    [
+      "done",
+      "missed",
+      "outside",
+      "outside",
+      "outside",
+      "outside",
+      "outside"
+    ]
+  ]
+}

@@ -12,7 +12,8 @@ same Supabase database, so your progress follows you.
 
 Pick anything you want to get better at — social anxiety, communication, self-doubt,
 addiction recovery, relationship health, reading, fitness, quitting porn, songwriting,
-singing, or a custom goal — and the app gives you **one small task every day**.
+singing, sleep, procrastination, anger, saving money, meditation, quitting vaping,
+or a custom goal — and the app gives you **one small task every day**.
 
 **The timeline changes the steps.** Tell it how long you want to give yourself:
 a 2-month goal climbs the difficulty ladder fast with bigger daily steps, while a
@@ -22,10 +23,20 @@ practice at each stage.
 Features:
 
 - 🪜 Every goal is a ladder of levels, from "embarrassingly easy" to "the real deal"
+- ✨ Custom goals get a personalized AI-built ladder (with an Anthropic API key — see below)
 - ⏱️ Timeline picker (2 weeks → 1 year, or a custom date) that paces the ladder
 - 🔥 Streaks, progress bar, and daily check-off with multiple goals at once
-- 💚 "Too big today" button that swaps in a gentler step from the previous level
+- 🛡️ Streak shields: every 7 completed tasks earns one, and each auto-covers a
+  single missed day so one bad day doesn't erase a 40-day streak
+- 💪 Adaptive difficulty: answer "too easy / just right / too hard" after each task
+  and the whole ladder shifts with you, up to 3 levels either way
+- 🏅 Milestone badges at 1, 3, 7, 14, 30, 50, 75, 100, 150 and 200 tasks
+- 📅 A 12-week calendar heatmap of every day you showed up
+- 📖 An optional one-line journal per task, so you can reread week 1 and see the change
+- 💚 "Too big today" button that swaps in a gentler step for a single day
 - 🎉 End-of-journey celebration with the option to extend 30 days
+- 📱 Built for a phone first: today's task and a big check-off button are the
+  whole home screen, with everything else tucked into collapsible sections
 
 ### Saving your progress
 
@@ -63,6 +74,30 @@ That's it — the app detects the credentials and syncs every change to
 Supabase, falling back to the local file if the connection ever hiccups.
 The keys stay server-side in Streamlit secrets; visitors to the app never
 see them.
+
+### AI-built plans for custom goals
+
+Out of the box, custom goals use a proven generic habit-building ladder. To
+have AI build a personalized 8-level ladder for *any* goal you type (juggling,
+budgeting, public speaking...), add an [Anthropic API key](https://platform.claude.com)
+to your Streamlit secrets:
+
+```toml
+ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+Each generated plan is one API call (typically a fraction of a cent) and is
+stored with the goal, so it's never regenerated — and the mobile app picks it
+up automatically through Supabase sync. Without a key, everything still works
+with the generic ladder.
+
+### Running the tests
+
+```
+$ python3 tests/test_app.py           # the app end to end
+$ python3 tests/test_integrations.py  # Supabase sync + AI ladders (fake servers)
+$ cd mobile && npm test               # shared logic, incl. web/mobile parity
+```
 
 ### How to run it on your own machine
 

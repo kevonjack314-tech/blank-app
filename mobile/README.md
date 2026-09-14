@@ -18,15 +18,30 @@ the web app — verified by tests that compare both implementations.
 4. Scan the QR code that appears — iPhone: with the Camera app; Android: with
    Expo Go. The app opens on your phone, and edits reload live.
 
+The home screen shows each goal's task for today with an **I did it** button
+right there, so the daily loop is one tap from launching the app (with an undo
+if you tap it by mistake). Tap a card for the ladder, stats, heatmap, journal
+and settings.
+
 Progress is saved on the device. To sync with the web app's Supabase database
 (so phone and web share one set of goals), open `src/config.js` and paste in
 the same `SUPABASE_URL` and anon key you used for the web app.
 
 There's a **daily reminder** card on the home screen — flip it on and pick a
-time, and the app schedules a local notification every day ("🌱 Your tiny step
-is ready"). It runs entirely on the device, so it works offline and needs no
-server. The first time you enable it, your phone will ask for notification
-permission.
+time, and the app schedules a local notification every day showing **that
+day's actual task** ("🌱 Your tiny step is ready — Give one genuine compliment
+today"), so you can act on it without even opening the app. Tasks are
+deterministic per date, so the app schedules the next 7 days up front and
+rolls the window forward each time it opens. It runs entirely on the device —
+offline, no server. The first time you enable it, your phone asks for
+notification permission.
+
+Everything from the web app is here: streak **shields** (every 7 tasks earns
+one, each auto-covers a missed day), **adaptive difficulty** (the too easy /
+just right / too hard buttons shift the whole ladder), **milestone badges**, a
+**12-week heatmap**, and the **journal**. Custom goals created on the web app
+with an AI-generated plan carry their personalized ladder over through
+Supabase sync, and difficulty feedback syncs both ways.
 
 ## Publishing to the App Store / Google Play
 

@@ -36,22 +36,38 @@ function daysBetween(fromISO, toISO) {
   return Math.round((to - from) / 86400000);
 }
 
+// A goal's ladder: its own AI-generated one (built by the web app and synced
+// via Supabase) if present, else the library's.
+export function levelsFor(goal) {
+  return goal.custom_levels || GOAL_LIBRARY[goal.category].levels;
+}
+
 export function goalDays(goal, today = todayISO()) {
   const total = Math.max(daysBetween(goal.start_date, goal.end_date), 1);
   const dayIndex = daysBetween(goal.start_date, today); // 0-based, can exceed total
   return { total, dayIndex };
 }
 
+export const MAX_OFFSET = 3; // how far feedback can shift you from the timeline's pace
+
+// Persistent adjustment from "too easy" / "too hard" feedback.
+export function levelOffset(goal) {
+  const raw = Number(goal.level_offset || 0);
+  if (!Number.isFinite(raw)) return 0;
+  return Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, Math.trunc(raw)));
+}
+
 export function currentLevelIndex(goal, today = todayISO()) {
-  const levels = GOAL_LIBRARY[goal.category].levels;
+  const levels = levelsFor(goal);
   const { total, dayIndex } = goalDays(goal, today);
   const clamped = Math.min(Math.max(dayIndex, 0), total - 1);
-  return Math.min(levels.length - 1, Math.floor((clamped * levels.length) / total));
+  const paced = Math.floor((clamped * levels.length) / total);
+  return Math.max(0, Math.min(levels.length - 1, paced + levelOffset(goal)));
 }
 
 // Deterministic daily task: same task all day, variants rotate day to day.
 export function taskForDay(goal, levelOffset = 0, today = todayISO()) {
-  const levels = GOAL_LIBRARY[goal.category].levels;
+  const levels = levelsFor(goal);
   let lvl = Math.max(0, currentLevelIndex(goal, today) + levelOffset);
   lvl = Math.min(lvl, levels.length - 1);
   const level = levels[lvl];
@@ -80,17 +96,73 @@ export function paceLabel(totalDays, numLevels) {
   };
 }
 
-// Streak counts back from today, or from yesterday if today isn't done yet.
+// Returns { streak, shields }. Streak counts back from today (or yesterday if
+// today isn't done yet). Shields protect streaks: every 7 completed tasks
+// earns one, and each can auto-cover a single missed day. Two missed days in
+// a row always break. Mirrors compute_streak in streamlit_app.py exactly.
 export function computeStreak(goal, today = todayISO()) {
   const done = new Set(goal.completed_dates || []);
-  if (done.size === 0) return 0;
+  const shieldsEarned = Math.floor(done.size / 7);
+  let used = 0;
   let day = done.has(today) ? today : addDaysISO(today, -1);
   let streak = 0;
-  while (done.has(day)) {
-    streak += 1;
+  for (;;) {
+    if (done.has(day)) {
+      streak += 1;
+    } else if (used < shieldsEarned && done.has(addDaysISO(day, -1))) {
+      used += 1;
+    } else {
+      break;
+    }
     day = addDaysISO(day, -1);
   }
-  return streak;
+  return { streak, shields: Math.max(shieldsEarned - used, 0) };
+}
+
+// Mirrors MILESTONES in streamlit_app.py.
+export const MILESTONES = [
+  [1, '🌱', 'First step'],
+  [3, '🌿', 'Three days in'],
+  [7, '⭐', 'One week'],
+  [14, '🔥', 'Two weeks'],
+  [30, '💪', 'Thirty tasks'],
+  [50, '🏅', 'Fifty strong'],
+  [75, '🚀', 'Seventy-five'],
+  [100, '💎', 'One hundred'],
+  [150, '👑', 'One-fifty'],
+  [200, '🏆', 'Two hundred'],
+];
+
+export function milestonesFor(doneCount) {
+  return {
+    earned: MILESTONES.filter(([n]) => doneCount >= n),
+    upcoming: MILESTONES.find(([n]) => doneCount < n) || null,
+  };
+}
+
+// Week rows (Monday-aligned) of 'done' | 'missed' | 'outside' for the heatmap.
+export function heatmapRows(goal, weeks = 12, today = todayISO()) {
+  const done = new Set(goal.completed_dates || []);
+  const [ty, tm, td] = today.split('-').map(Number);
+  const weekday = (new Date(ty, tm - 1, td).getDay() + 6) % 7; // Monday = 0
+  const end = addDaysISO(today, 6 - weekday);
+  const first = addDaysISO(end, -(weeks * 7 - 1));
+  const rows = [];
+  let day = first;
+  for (let w = 0; w < weeks; w++) {
+    const cells = [];
+    for (let d = 0; d < 7; d++) {
+      if (day < goal.start_date || day > today) cells.push('outside');
+      else if (done.has(day)) cells.push('done');
+      else cells.push('missed');
+      day = addDaysISO(day, 1);
+    }
+    rows.push(cells);
+  }
+  // Drop whole weeks that fall entirely before the journey began — a new goal
+  // shouldn't open on six rows of blank squares.
+  while (rows.length > 1 && rows[0].every((c) => c === 'outside')) rows.shift();
+  return rows;
 }
 
 export function goalOptions() {
